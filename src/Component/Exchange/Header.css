@@ -1,0 +1,275 @@
+.coinblock p {
+    margin: 0px !important;
+    text-align: left !important;
+}
+
+.coinblock {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.bitblock {
+    display: flex;
+    align-items: center;
+}
+
+.btc-usd {
+    margin-left: 10px;
+}
+
+.btc-usd span {
+    color: #fff;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.btc-usd p {
+    color: rgba(255, 255, 255, 0.58);
+}
+
+.btc-usd {
+    margin-left: 10px;
+}
+
+.btc-usd span {
+    color: #fff;
+    margin-bottom: 0px;
+    display: flex;
+    font-size: 12px;
+}
+
+span.quote-badge {
+    height: 16px;
+    display: flex;
+    margin-left: 5px;
+    padding: 1px 4px;
+    line-height: 10px;
+    align-items: center;
+    color: white;
+    justify-content: center;
+    font-size: 12px;
+    background: rgba(187, 201, 242, 0.15);
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 80%);
+    border-radius: 2px;
+}
+
+.btc-usd p {
+    color: rgba(255, 255, 255, 0.58);
+    font-size: 12px;
+}
+
+.bitblock {
+    padding-right: 15px;
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
+    padding-left: 15px;
+}
+
+.bithigh, .bitincrese, .bitdecrse {
+    text-align: left;
+    padding: 10px 6px;
+    margin-left: 8px;
+}
+
+.bitincrese-value span {
+    color: #23D886;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.bitincrese p, .bitdecrse p, .bithigh p {
+    color: rgba(255, 255, 255, 0.58);
+}
+
+.bithigh span, .bitincrese span, .bitdecrse span {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.bithigh-value span {
+    color: #fff;
+}
+
+.bitdecrse-value span {
+    color: #E56846;
+}
+
+.bitincrese img, .bitdecrse img{margin-left: 3px;}
+
+nav.head-menu-part li a {
+    color: rgba(255, 255, 255, 0.78);
+    text-decoration: none;
+}
+
+nav.head-menu-part li {
+    list-style: none;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+nav.head-menu-part {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+li.darklight-list, li.setting-list {
+    height: auto !important;
+}
+
+nav.head-menu-part li a{padding: 10px;}
+
+li.setting-list a, li.darklight-list a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.setting-list a {padding: 0px;}
+
+.setting-list {
+    background: #0081EB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 0 0 20px;
+}
+
+li.setting-list div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.rowhead-setting {
+    padding: 10px 15px;
+    background: #18222f;
+    color:rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid #070b10;
+    margin-bottom: 1px;
+    box-shadow: 0 1px 0 0 rgb(255 255 255 / 10%);
+    font-size: 12px;
+
+}
+
+div#long-menu ul {
+    padding: 0px;
+}
+
+.rowone-setting, .rowtwo-setting, .rowthree-setting, .rowfour-setting {
+    padding: 8px 15px;
+    color: #fff;
+}
+
+.link1-setting, .link2-setting, .link3-setting, .link4-setting, .link5-setting{
+    padding: 8px 15px;
+    color: #fff;
+}
+
+.rowone-setting p, .rowtwo-setting p, .rowthree-setting p, .rowfour-setting p {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    color:rgba(255, 255, 255, 0.5);
+}
+
+.rowone-setting span, .rowtwo-setting span, .rowthree-setting span, .rowfour-setting span {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.link1-setting span, .link2-setting span, .link3-setting span, .link4-setting span, .link5-setting span{
+    font-size: 12px;
+}
+
+.link1-setting {
+    margin-bottom: 1px;
+    border-bottom: 1px solid #070b10;
+    box-shadow: 0 1px 0 0 rgb(255 255 255 / 10%);
+    border-top: 1px solid #070b10;
+}
+
+.dis-flex-cmn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dis-flex-cmn span.launch-icon svg {
+    font-size: 13px;
+}
+
+.dis-flex-cmn span.redirect-icon svg {
+    font-size: 20px;
+}
+
+.rowhead-setting svg {
+    font-size: 13px;
+    position: relative;
+    top: 3px;
+    margin-right: 2px;
+}
+
+div#inner-drop-button button {box-shadow: 0 0 0 1px rgb(0 0 0 / 80%);background-color: rgba(187, 201, 242, 0.15);border-radius: 2px;height: 24px;padding: 4px 8px;font-size: 12px;}
+
+.settings-optn-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inner-menu-drop-right ul{
+    padding: 0px !important;
+    background: #18222f;
+    flex-direction: column;
+    box-sizing: border-box;
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 50%), 0 5px 15px 0 rgb(0 0 0 / 15%), inset 0 0 0 1px rgb(255 255 255 / 10%);
+    border-radius: 2px;
+}
+
+.inner-menu-drop-right ul li{font-size: 12px;color:#fff}
+
+button#demo-customized-button {
+    text-transform: none;
+}
+
+
+div#inner-drop-button {
+    width: 110px;
+}
+
+div#inner-drop-button button {
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+
+
+div#inner-drop-button-E2 button, #inner-drop-button-clear button {box-shadow: 0 0 0 1px rgb(0 0 0 / 80%);background-color: rgba(187, 201, 242, 0.15);border-radius: 2px;height: 24px;padding: 4px 8px;font-size: 12px;}
+
+button#demo-customized-button-E2, #inner-drop-button-clear button {
+    text-transform: none;
+}
+div#inner-drop-button-E2 {
+    width: 110px;
+}
+
+#inner-drop-button-clear{
+    width: 120px;
+}
+
+div#inner-drop-button-E2 button, #inner-drop-button-clear button {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.dis-flex-cmn:hover{
+    background-color: rgba(117, 128, 159, 0.15);
+    cursor: pointer;
+}

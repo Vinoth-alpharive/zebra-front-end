@@ -1,0 +1,37 @@
+.logged-out-msg {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.58);
+    font-size: 12px;
+}
+
+.logged-out-msg a{
+   color: #0f9fff;
+    text-decoration: none;
+}
+
+.orderoutercontain .MuiTabs-flexContainer {
+    border: none !important;
+}
+
+.orderoutercontain .MuiTabs-flexContainer .Mui-selected {
+    background: transparent;
+    border: none !important;
+}
+
+.orderoutercontain .MuiTabs-flexContainer button {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-transform: none;
+}
+
+.orderoutercontain {
+    display: flex;
+    justify-content: space-between;
+    background: #18222F;
+    margin-left: 0px;
+    align-items: center;
+}
+
+.logged-out-msg {
+    padding: 50px 0 !important;
+}

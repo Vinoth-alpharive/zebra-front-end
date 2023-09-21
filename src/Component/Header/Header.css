@@ -1,0 +1,208 @@
+ul.header-menus {
+    list-style: none;
+    padding-left: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+}
+
+ul.header-menus li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    color: #596570;
+    font-family: 'Space Grotesk', sans-serif !important;
+}
+
+
+.header-part nav, .header-part nav ul {
+    height: 100%;
+}
+.logo-part {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.connect-wallet {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu-toggle-icon, .menu-block-header-mobile{display: none;}
+
+.footer-social-list img {height: 30px;}
+
+span.green-light {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: green;
+}
+.enable-wallet {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+
+.enable-wallet h2 {
+    word-wrap: break-word;
+    max-width: 279px;
+    /* align-items: center; */
+    font-size: 13px;
+    text-align: left;
+    margin: 0px;
+}
+
+th.market-hading-block {
+    color: #fff;
+    font-weight: 700 !important;
+    border: none;
+}
+tr.market-search-tab th {
+    border-bottom: none;
+}
+
+@media (max-width:991.98px){
+
+.menu-toggle-icon{display: block !important;}
+
+nav.menu-block-header{display: none !important;}
+
+.menu-block-header-mobile {
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    background: #000;
+    display: block !important;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-100%);
+}
+
+nav#active.menu-block-header-mobile {
+    transform: translateX(0px);
+}
+
+nav.menu-block-header ul.header-menus li a, nav.menu-block-header ul.header-menus li {
+    width: 100%;
+}
+
+nav.menu-block-header ul.header-menus li a {
+    padding: 10px;
+}
+
+nav.menu-block-header ul.header-menus li {
+    text-align: left;
+}
+
+nav.menu-block-header-mobile ul.header-menus li a, nav.menu-block-header-mobile ul.header-menus li button {
+    padding: 0px 15px;
+    width: 100%;
+    text-align: left !important;
+    display: block;
+}
+
+nav.menu-block-header-mobile ul.header-menus li {
+    width: 100%;
+}
+
+.logo-part-menu {
+    padding: 0px !important;
+    text-align: left;
+}
+
+.menu-mobile-close-part .close-menu svg {
+    color: #fff;
+}
+
+.menu-mobile-close-part {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav#active.menu-block-header-mobile {
+    transform: translateX(0px);
+}
+
+.header-part.header-section .MuiGrid-container {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap:10px
+}
+
+.header-part.header-section .MuiGrid-container .MuiGrid-root:nth-child(2) {
+    order: 3;
+}
+
+.header-section .connect-wallet button {
+    width: 145px;
+}
+
+.coins-block {
+    margin-top: 0 !important;
+}
+
+.connect-wallet {
+    justify-content: center;
+}
+
+.menu-toggle-icon {
+    text-align: right;
+    position: absolute;
+    right: 10px;
+    top: 28px;
+    background: #18222f;
+    width: 29px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-toggle-icon svg {
+    color: #fff;
+}
+
+.header-part.header-section .MuiGrid-container.header-container-block {
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: flex-start;
+}
+
+}
+
+
+
+
+@media (min-width:992px) and (max-width:1199.98px){
+
+
+    .header-part.header-section .MuiGrid-container {
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+}
+
+.add-font{
+    font-size: medium;
+}
+
+.back{
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    color: #596570;
+    font-family: 'Space Grotesk', sans-serif !important;
+}

@@ -1,0 +1,21 @@
+.righttradetop button#demo-customized-button {
+    background: transparent;
+    text-transform: none;
+    font-size: 12px;
+    padding-left: 0px;
+    padding-right: 4px;
+    color: rgba(255, 255, 255, 0.5);
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.righttradetop .confirmation-left span {padding-bottom: 0px;padding-top: 0px;}
+
+.righttradetop .confirmation-right span {
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.my-order-tab-head {
+    border: none !important;
+}

@@ -1,0 +1,25 @@
+div#selling-order-detail > div, div#buying-order-detail > div {
+    overflow: auto;
+    position: relative;
+    max-height: 250px;
+    min-height: 250px;
+}
+
+div#selling-order-detail > div::-webkit-scrollbar, div#buying-order-detail > div::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  /* Track */
+  div#selling-order-detail > div::-webkit-scrollbar-track, div#buying-order-detail > div::-webkit-scrollbar-track {
+    background: #363535; 
+  }
+   
+  /* Handle */
+  div#selling-order-detail > div::-webkit-scrollbar-thumb, div#buying-order-detail > div::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  div#selling-order-detail > div::-webkit-scrollbar-thumb:hover, div#buying-order-detail > div::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }

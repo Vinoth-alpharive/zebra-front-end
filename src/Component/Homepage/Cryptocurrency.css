@@ -1,0 +1,57 @@
+.crypto-banner-txt h2, .crypto-banner-txt p {
+    margin: 10px;
+    color: #fff;
+    text-align: left;
+}
+.proposal-img-name {
+    display: flex;
+    color: #596570;
+    align-items: center;
+    gap: 10px;
+}
+
+.proposal-desc p {
+    color: #596570;
+    margin: 5px 0px;
+}
+
+.proposal-web {
+    color: #596570;
+    font-weight: 700;
+    font-size: 13px;
+    background: #EDF3F6;
+    border-radius: 5px;
+    padding: 5px;
+    width: 80px;
+    text-align: center;
+}
+
+.spot-id {
+    color: #181a1a;
+    font-weight: 600;
+}
+
+.proposal-block {
+    display: flex;
+    flex-direction: column;
+}
+.cointable-table.crypto-table tr td {
+    border-bottom: 1px solid #C0C9D0 !important;
+}
+
+.cointable-table.crypto-table tr:last-child td {
+    border-bottom: none !important;
+}
+span.vote-percent {
+    color: #000;
+    position: absolute;
+    right: 0;
+    top: -6px;
+}
+.proposal-vote {
+    position: relative;
+}
+
+.proposal-vote > div {
+    padding-right: 45px;
+}

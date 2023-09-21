@@ -1,0 +1,77 @@
+#head-menu-id button{color: #fff;text-transform: none !important;}
+
+ul.right-menus-head {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0px;
+    margin: 0px;
+    height: 100%;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+}
+
+ul.right-menus-head li a {
+    color: #fff;
+    text-decoration: none;
+    /* padding-left: 20px; */
+}
+
+ul.right-menus-head li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-landing-all .MuiGrid-container {
+    justify-content: space-around;
+}
+
+#wallet-menu ul, #order-menu ul  {
+    padding: 0px;
+}
+
+#wallet-menu ul li a, #order-menu ul li a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    padding: 16px;
+    font-weight: 600;
+    align-items: center;
+}
+
+button#menubutton1, button#menubutton2 {
+    color: #fff;
+    text-transform: none;
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative;
+    top: 2px;
+}
+
+#wallet-menu ul li a svg, #order-menu ul li a svg{margin-right: 10px;}
+
+#wallet-menu ul li a:hover, #order-menu ul li a:hover{background: #ccc;color:#fff}
+
+.qrcode-img img{width: 180px;}
+.qrcode h3 {
+    padding: 5px 0;
+    font-size: 14px;
+    max-width: 170px;
+    text-align: center;
+}
+.qrcode button{margin-top: 0px;background-color: #59b8f8;color:#fff; padding: 10px;font-size: 13px;border: none;}
+.qrcode-img {
+    text-align: center;
+}
+
+.qrcode{text-align: center;}
+
+ul.right-menus-head button {
+    padding-left: 0px;
+    padding-right: 0px;
+    min-width: auto;
+}
+

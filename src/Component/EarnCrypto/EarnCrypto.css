@@ -1,0 +1,257 @@
+.coin-main-table-outer .MuiTabs-flexContainer button {
+    color: #787E87 !important;
+    font-weight: 700 !important;
+    font-size: 18px !important;
+    padding-top: 10px !important;
+    padding-bottom: 12px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    letter-spacing: 0px !important;
+}
+
+.coin-main-table-outer .MuiTabs-flexContainer {
+    margin: 0px !important;
+    border: none !important;
+}
+
+.coin-main-table-outer .MuiTabs-flexContainer .Mui-selected {
+    border: none !important;
+    background: transparent !important;
+    color: #181A1A !important;
+}
+table.cointable-table.earn-crypto-table tr td {
+    color: #283340 !important;
+}
+
+.coin-chart-img.chart-block.pool-block-3 {
+    padding: 0px !important;
+    background: transparent;
+    margin-bottom: 0px;
+}
+
+.coin-vol-new.coin-price-new.pool-block-5 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.change-percentage.pool-block-4 {
+    color: #0C9251;
+    font-weight: 700;
+}
+
+
+
+/*** coin pair detail css **/
+
+
+.earn-crypto-coin-detail-coin-inner-top img {
+    width: 30px;
+}
+
+.earn-crypto-coin-detail-coin-inner-bottom img {
+    width: 25px;
+}
+
+.coin-pair-main-img-pair {
+    display: flex;
+}
+
+.coin-pair-main-img-pair div:nth-child(2) {
+    margin-left: -5px;
+}
+
+.earn-crypto-coin-detail-coin-inner-top {
+    display: flex;
+}
+
+.coin-pair-main-name h2 {
+    margin: 0px;
+    margin-left: 10px;
+}
+
+.earn-crypto-coin-detail-coin-inner-top {
+    margin-bottom: 15px;
+}
+
+.earn-crypto-coin-detail-coin-inner-bottom {
+    font-size: 15px;
+    font-weight: 700;
+    color: #596570;
+}
+
+.earn-crypto-coin-detail-coin-inner-bottom > div {
+    display: flex;
+    align-items: center;
+    background: #EDF3F6;
+    border-radius: 9px;
+    padding: 10px;
+}
+
+.earn-crypto-coin-detail-coin-inner-bottom {
+    display: flex;
+    gap: 20px;
+}
+
+.earn-crypto-coin-detail-coin-inner-bottom > div div {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+
+button.add-liquidity {
+    background: #53D6FF;
+    border-radius: 9px;
+    color: #000;
+    height: 40px;
+    text-transform: none;
+    box-shadow: none !important;
+}
+
+button.add-liquidity span {
+    margin: 0px !important;
+    position: relative;
+    top: 4px;
+    color: #000;
+}
+
+button.add-liquidity-trade {
+    height: 39px;
+    background: #181A1A;
+    border-radius: 9px;
+    box-shadow: none !important;
+    text-transform: none;
+}
+
+.buttons-liquidity-trade {
+    display: flex;
+    gap: 10px;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+table.cointable-table.earn-crypto-table.earn-crypto-table-transaction {
+    box-shadow: none !important;
+    border: 1px solid #ccc;
+}
+
+span.earn-crypto-table-transaction-head {
+    color: #181A1A !important;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+
+
+table.cointable-table.earn-crypto-table.earn-crypto-table-transaction th {
+    color: #596570;
+    font-size: 15px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+table.cointable-table.earn-crypto-table.earn-crypto-table-transaction td {
+    color: #283340 !important;
+    font-size: 15px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+table.cointable-table.earn-crypto-table.earn-crypto-table-transaction .coin-chart-img.chart-block.pool-block-3 {
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+
+table.cointable-table.earn-crypto-table.earn-crypto-table-transaction .coin-chart-img.chart-block.pool-block-3 span {margin-right: 10px}
+
+.liquidity-details-left-top h3 {
+    color: #596570;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0px;
+}
+
+.flex-box-grd-box img {
+    height: 25px;
+    width: auto;
+}
+
+.flex-box-grd-box span {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    color: #596570;
+}
+
+.liquidity-details-left-top .flex-box-grd-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-box-grd-box div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.liquidity-details-left-bottom-percentage.highpercentage, .liquidity-details-left-bottom-price {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.liquidity-details-left-bottom-price span, .liquidity-details-left-bottom-percentage.highpercentage span, .liquidity-details-left-bottom-name span {
+    margin: 0px;
+}
+
+.liquidity-details-left-bottom-inner {
+    padding: 15px 0;
+}
+
+.liquidity-details-left-bottom-price {
+    padding: 3px 0;
+}
+
+.liquidity-details-left-bottom {
+    padding-top: 15px;
+    border-top: 2px solid #C0C9D0;
+}
+
+.liquidity-details-left-top {
+    padding-bottom: 10px;
+}
+
+.liquidity-details-left {
+    background: #EDF3F6;
+    border-radius: 9px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.liquidity-details-left-bottom-name span {
+    color: #787E87;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.liquidity-details-left-bottom-price {color: #596570;font-size: 21px !important;font-weight: 500;}
+
+.liquidity-details-left-bottom-percentage.highpercentage, .liquidity-details-left-bottom-percentage.highpercentage span {
+    color: #0C9251 !important;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+h2.dollar-vlue-in-chart {
+    font-size: 21px !important;
+    line-height: 27px;
+    color: #596570;
+}
+
+.padding-block button.Mui-selected {
+    background: #EDF3F6 !important;
+    border-radius: 9px;
+    color: #596570 !important;
+    border: none !important;
+}

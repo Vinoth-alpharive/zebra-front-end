@@ -1,0 +1,48 @@
+.body-table {
+    background: transparent !important;
+}
+
+.body-table-contain-paper {
+    background: transparent !important;
+    box-shadow: none;
+}
+
+.body-table-contain-paper td, .body-table-contain-paper th, .body-table-contain-paper td span, .body-table-contain-paper th span, .body-table-contain-paper td svg, .body-table-contain-paper th svg {
+    color: #ffffffad !important;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.body-table-contain-paper td, .body-table-contain-paper th{border-bottom: 1px solid rgb(86 84 84)}
+
+
+.body-table-contain-paper th, .body-table-contain-paper .MuiTablePagination-toolbar {
+    background: #98939329 !important;
+    color: #fff;
+}
+
+.body-table-contain-paper .MuiTablePagination-toolbar svg {
+    color: #fff;
+}
+
+.name-head-table img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.name-head-table {
+    display: flex;
+    align-items: center;
+}
+
+a.action-btn {
+    text-decoration: none;
+    color: #f2901f;
+    margin: 0 5px;
+    font-weight: 600;
+}
+
+.body-table-contain-paper td {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

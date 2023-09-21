@@ -1,0 +1,32 @@
+div#currency-country-block {
+    padding: 20px 0;
+    background: #242424;
+}
+
+div#currency-country-block .MuiTabs-flexContainer {
+    border: none !important;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 100%;
+}
+
+div#currency-country-block .MuiTabs-flexContainer button {
+    font-size: 16px;
+    background: transparent !important;
+    border: none !important;
+    margin-right: 10px;
+    height: 100%;
+    position: relative;
+}
+
+div#currency-country-block .MuiTabs-flexContainer button.Mui-selected::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    background: #0b7aff;
+}
+
+.clr-head{color: #fff;}

@@ -1,0 +1,22 @@
+.bittrex-homepage-exchange {
+    background: #18222f;
+    /* height: 100vh; */
+    overflow: hidden;
+}
+.tap-table-block {
+    max-height: 200px;
+    min-height: 200px;
+    overflow: hidden;
+}
+
+.trade-history-block.order-open-book.order-open-book-mobile h4.sell-buy-trade-head.my-order-head {
+    padding: 0 20px 15px;
+}
+
+@media (max-width:991.98px){
+
+    .trade-history-block.order-open-book.order-open-book-mobile {
+        margin-top: 14px;
+    }
+
+}

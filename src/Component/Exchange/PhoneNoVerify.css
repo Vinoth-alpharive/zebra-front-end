@@ -1,0 +1,65 @@
+.PhoneNoVerify {
+    height: 100vh;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+
+button.button-block {
+    color: rgb(234, 236, 239);
+    padding: 10px 24px;
+    background-color: rgb(71, 77, 87);
+    margin-top: 20px;
+    text-transform: none;
+}
+
+button.create-alpha-accnt, .forgot-pass-alpha-accnt {
+    width: 100%;
+    justify-content: flex-start !important;
+    text-transform: none !important;
+    margin-top: 15px !important;
+    padding-left: 0px !important;
+}
+
+.qr-img img {
+    width: 180px;
+}
+
+h2.alpha-login-text {
+    font-size: 30px;
+    color: #fff;
+    text-align: left;
+}
+
+.color-change{color: #fff;text-align: left;}
+
+.otp-entercode {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.otp-entercode input {
+    width: 20%;
+    margin: 2px;
+    height: 44px;
+    background: transparent;
+    border-radius: 0px !important;
+    border: none !important;
+    border-bottom: 2px solid #ccc !important;
+    color: #ccc;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+button.create-alpha-accnt {
+    width: 100%;
+    justify-content: flex-start;
+    text-transform: none;
+    margin-top: 0px !important;
+    padding-left: 0px;
+}
+

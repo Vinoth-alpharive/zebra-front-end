@@ -1,0 +1,307 @@
+.balance-head-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.balance-head-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.balance-head-left h3, .balance-head-left h2, .transaction-head-search h3 {
+    margin: 0px;
+    text-align: left;
+    color: #fff;
+    padding: 5px 0;
+}
+.balance-head-left h2 {
+    font-size: 30px;
+}
+.balance-head-left h3{margin-bottom: 20px;}
+button.search-transaction {
+    padding: 0px;
+    text-align: center;
+    width: 40px !important;
+    min-width: 40px;
+    height: 33px;
+    background: #373c3e;
+    border: none;
+    color: #787e87;
+}
+
+button.search-transaction span {
+    margin-right: 0px !important;
+}
+
+.transaction-head-search {
+    display: flex;
+    justify-content: space-between;
+}
+.inner-tab-account .MuiTabs-flexContainer {
+    margin: 0px !important;
+}
+
+.account-tabs-outer .MuiTabs-flexContainer {
+    margin: 0px;
+}
+.inner-tab-account .MuiTabs-flexContainer {
+    margin: 0px !important;
+}
+
+.account-tabs-outer .MuiTabs-flexContainer {
+    margin: 0px;
+}
+
+
+.account-tabs-outer button {
+    padding: 15px;
+    color: #787E87 !important;
+    font-size: 15px;
+}
+
+.account-tabs-outer .MuiTabs-flexContainer {
+    border: none !important;
+    background: #252728;
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+.account-tabs-outer .MuiTabs-flexContainer .Mui-selected {
+    border: none !important;
+}
+
+.account-tabs-outer {
+    margin-top: 26px;
+}
+.inner-tab-account .MuiTabs-flexContainer {
+    margin: 0px !important;
+}
+
+.account-tabs-outer .MuiTabs-flexContainer {
+    margin: 0px;
+}
+
+
+.account-tabs-outer button {
+    padding: 15px;
+    color: #787E87 !important;
+    font-size: 15px;
+}
+
+.account-tabs-outer .MuiTabs-flexContainer {
+    border: none !important;
+    background: #252728;
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+.account-tabs-outer .MuiTabs-flexContainer .Mui-selected {
+    border: none !important;
+}
+
+.account-tabs-outer {
+    margin-top: 26px;
+}
+
+.coin-detail-balance {
+    background: #292A2B;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 20px 15px;
+}
+.inner-tab-account .MuiTabs-flexContainer {
+    margin: 0px !important;
+}
+
+.account-tabs-outer .MuiTabs-flexContainer {
+    margin: 0px;
+}
+
+
+.account-tabs-outer button {
+    padding: 15px;
+    color: #787E87 !important;
+    font-size: 15px;
+}
+
+.account-tabs-outer .MuiTabs-flexContainer {
+    border: none !important;
+    background: #252728;
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+.account-tabs-outer .MuiTabs-flexContainer .Mui-selected {
+    border: none !important;
+}
+
+.account-tabs-outer {
+    margin-top: 26px;
+}
+
+.coin-detail-balance {
+    background: #292A2B;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 20px 15px;
+}
+
+span.token-amount-head {color: #787E87;font-weight: 700;font-size: 14px;}
+
+.token-amount-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+span.token-amount-value {
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+span.span-token-name {
+    color: #fff;
+}
+
+.token-symb-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.coins-club {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+span.token-amount-value-badge {
+    font-size: 13px !important;
+    font-weight: 700;
+    color: #316C36;
+    background: #46FF6F;
+    border-radius: 6px;
+    width: 60px;
+    margin-top: 5px;
+}
+.coin-detail-balance-specific {
+    justify-content: space-between;
+}
+
+button.more-button {
+    background: #373C3E;
+    border-radius: 27px;
+    border: none;
+    color: #787E87;
+    font-size: 12px;
+}
+.button-more-outer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inner-tab-account .MuiBox-root {
+    padding: 10px 0px !important;
+}
+.table-container-cls {
+    background: transparent !important;
+}
+
+.table-container-cls table tr th {
+    color: #787E87;
+    font-weight: 700;
+    border-bottom: 1px solid #373C3E !important;
+}
+.table-container-cls table tr td { border-bottom: 1px solid #373C3E !important;}
+
+.status-status {
+    color: #46FF6F;
+    background: #373C3E;
+    border-radius: 6px;
+    padding: 5px;
+    text-align: center;
+}
+
+.spantwo {
+    color: #787E87 !important;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.spanone {
+    color: #fff;
+    font-size: 12px;
+}
+
+.cmn-outer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+span.token-trans {
+    font-size: 13px;
+    color: #fff;
+}
+
+span.token-tokensym {
+    color: #717672;
+    font-size: 13px;
+    font-weight: 700;
+    background: #373C3E;
+    border-radius: 6px;
+    padding: 5px;
+    margin-left: 5px;
+}
+.more-options-balance button {
+    text-transform: none !important;
+    background: #373C3E;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+}
+
+.more-options-balance {
+    display: flex;
+    gap: 15px;
+}
+
+.balance-more-close {
+    width: 34px;
+    height: 34px;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+}
+.more-options-balance button:hover {
+    border: none !important;
+}
+.coin-detail-balance {
+    position: relative;
+    overflow: hidden;
+}
+
+.more-options-balance {
+    position: absolute;
+    top: 0;
+    right: 4%;
+    height: 100%;
+    align-items: center;
+    background: #292a2b;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(107%);
+    width: 55%;
+    justify-content: flex-end;
+}
+div#active-id {
+    transform: translateX(0%) !important;
+}
+.deposit-hover:hover{background: #46FF6F !important;color:#000 !important}
+.withdraw-hover:hover{background: #FF8383 !important;color:#000 !important}
+.tradeswap-hover:hover{background: #fff !important;color:#000 !important}

@@ -1,0 +1,167 @@
+.login-page {
+    height: 100vh;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+hr.or-hr {
+    margin: 40px 0;
+}
+
+.or-hr {
+    color: #979797;
+    font-size: 20px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.or-hr::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #ccc;
+    left: 0;
+    top: 13px;
+}
+
+.or-hr::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    background: #000;
+    left: 50%;
+    margin-left: -40px;
+}
+
+.or-hr span{position: relative;z-index: 9;} 
+
+button.button-block {
+    color: rgb(234, 236, 239);
+    padding: 10px 24px;
+    background-color: rgb(71, 77, 87);
+    margin-top: 20px;
+    text-transform: none;
+}
+
+button.create-alpha-accnt, .forgot-pass-alpha-accnt {
+    width: 100%;
+    justify-content: flex-start !important;
+    text-transform: none !important;
+    margin-top: 15px !important;
+    padding-left: 0px !important;
+}
+
+.qr-img img {
+    width: 180px;
+}
+
+h2.alpha-login-text {
+    font-size: 30px;
+    color: #fff;
+    text-align: left;
+}
+
+.signup-tab .MuiTabs-flexContainer {
+    margin: 0px;
+}
+
+.signup-tab .MuiTabs-flexContainer button {
+    padding: 14px 22px;
+    margin-right: 24px;
+}
+
+.tabpanel-signup .MuiBox-root {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.chekbox-signup {
+    color: #fff;
+    display: flex;
+    font-size: 14px;
+    margin: 8px 0 10px;
+}
+
+.chekbox-signup .MuiCheckbox-root {
+    padding: 0px;
+    margin-right: 10px;
+}
+
+.coin-img-inner.country-dtls {
+    display: flex;
+    align-items: center;
+}
+
+.coin-img.country-img {
+    justify-content: space-between;
+}
+
+.coin-img.country-img h4 {
+    color: #ccc;
+    margin: 0px;
+}
+
+ul.coin-list-menu.country-detailed-list {
+    min-height: 250px;
+    max-height: 250px;
+    overflow: auto;
+}
+
+ul.coin-list-menu.country-detailed-list li {
+    padding: 5px 10px 5px 0;
+}
+
+.flag-image-code {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ul.coin-list-menu.country-detailed-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ul.coin-list-menu.country-detailed-list::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ul.coin-list-menu.country-detailed-list::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  .country-code-input .MuiInputBase-root {
+    padding-right: 0px;
+}
+
+.country-code-input .MuiInputAdornment-root {
+    margin-left: 0px;
+}
+
+.react-puzzle-confirm-button-group {
+    display: none !important;
+}
+
+.react-puzzle-confirm-modal {
+    z-index: 9 !important;
+}
+
+.country-code-input .MuiInputBase-root:hover fieldset, .personal-phone-no-input .MuiInputBase-root:hover fieldset {
+    border-color: rgba(0, 0, 0, 0.23) !important;
+}

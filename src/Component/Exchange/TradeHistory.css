@@ -1,0 +1,82 @@
+.flex-trade-histry {
+    /* margin-left: 6px; */
+    background: #18222F;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    align-items: center;
+}
+
+span.head-block {
+    font-size: 12px;
+    color: #fff;
+}
+
+.dots-block button {
+    color: #fff;
+    padding: 0px;
+}
+
+.option-btns {
+    background: #18222f;
+    /* margin-left: 6px; */
+    display: flex;
+    margin-top: 1px;
+    padding: 4px 0;
+}
+
+.option-btns button {
+    padding: 0px;
+    color: rgba(255, 255, 255, 0.58);
+    font-size: 11px;
+}
+
+.prev-nxt-btns button {
+    padding: 0;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.35);
+    border-radius: 2px;
+    display: inline-block;
+    min-width: 40px;
+}
+
+.prev-nxt-btns {
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 80%);
+    border-radius: 2px;
+    display: flex;
+    margin: 0 10px 0 0;
+    width: 80px;
+    /* flex-direction: row; */
+}
+
+.auto-btn button {
+    background: rgba(187, 201, 242, 0.15);
+    color: #fff;
+}
+
+.market-right-inner.right-align-white label {
+    color: #fff;
+}
+
+.market-left-left.rght-algn-ttl {justify-content: flex-end;}
+
+/* .market-left-left.price {
+    justify-content: flex-end;
+} */
+
+.market-right-inner label {
+    color: #fff;
+}
+
+.market-right.right .market-right-inner span {
+    color: #fff;
+}
+
+span.head-block {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.trade-history-block .flex-trade-histry {
+    padding-top: 22px;
+}

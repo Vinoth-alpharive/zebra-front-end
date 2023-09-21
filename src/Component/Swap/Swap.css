@@ -1,0 +1,276 @@
+.swapping {
+    max-width: 500px;
+    margin: 0px auto;
+}
+
+.swapp-img {
+    display: flex;
+    color: #fff;
+}
+
+.swapp-img img {
+    margin-right: 10px;
+}
+
+p.swap-para {
+    font-size: 12px;
+    color: #787E87;
+    text-align: left;
+}
+
+.swap-token input {
+    width: 100% !important;
+    padding: 14px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 40px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.swap-token {
+    margin-bottom: 10px;
+}
+
+span.dollar-value {
+    display: block;
+    color: #787E87;
+    font-weight: 700;
+    text-align: left;
+}
+
+.grid-swap-outer {
+    width: 100%;
+    border: 1px solid #373C3E;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+button.Swap-Coins {
+    width: 100%;
+    background: #fff;
+    color: #000;
+    text-transform: none;
+    font-size: 18px;
+    letter-spacing: 0px;
+    font-weight: 700;
+}
+
+span.dollar-value-percentage {
+    color: #46FF6F;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.swap-token {
+    background: #292A2B;
+    border-radius: 9px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.swap-token {
+    background: #292A2B;
+    border-radius: 9px;
+    padding: 15px;
+    margin-bottom: 10px !important;
+}
+
+.dollar-value-with-percent {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+span.dollar-value-percentage {
+    color: #46FF6F;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.block-chain-swap span {
+    font-size: 15px;
+}
+
+.swaping-rate-block-chain span {
+    font-size: 15px;
+    margin-left: 8px;
+    color: #fff;
+}
+
+.overall-swap-rate {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-top: 1px solid #373C3E;
+    margin-top: 15px;
+}
+
+.block-chain-swap span:first-child {
+    color: #fff;
+}
+
+.block-chain-swap span:nth-child(2) {
+    color: #787E87;
+    margin-left: 5px;
+}
+
+.grid-swap-outer {
+    position: relative;
+}
+
+.coinswapimg {
+    position: absolute;
+    top: 50%;
+    margin-top: -83px;
+    left: 50%;
+    margin-left: -15px;
+}
+
+span.arrow-btn-token {
+    display: flex;
+    flex-direction: column;
+}
+
+span.arrow-btn-token svg {
+    font-size: 15px;
+    color: #fff;
+}
+
+span.arrow-btn-token svg:nth-child(1) {
+    position: relative;
+    top: 3px;
+}
+
+span.arrow-btn-token svg:nth-child(2) {
+    position: relative;
+    top: -5px;
+}
+
+button.token-button-link {
+    background: #373C3E;
+    border-radius: 32px;
+    margin-top: 20px;
+}
+
+h3.select-token-head-modal {
+    margin: 0px;
+    color: #fff;
+    font-size: 20px;
+}
+
+span.select-token-head-modal-close {
+    display: inline-block;
+    text-align: right !important;
+    width: 100%;
+}
+
+span.select-token-head-modal-close svg {
+    color: #fff;
+    border-radius: 50%;
+    font-size: 34px;
+    margin-top: -5px;
+}
+
+span.select-token-head-modal-close svg {
+    color: #fff;
+    border-radius: 50%;
+    font-size: 34px;
+    margin-top: -5px;
+}
+
+nav.coin-modal-list li a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #373C3E;
+}
+
+nav.coin-modal-list li {
+    list-style: none;
+}
+
+.coin-name-img {
+    margin-right: 10px;
+}
+
+nav.coin-modal-list {
+    margin-top: 25px;
+}
+
+nav.coin-modal-list li:last-child a {
+    border-bottom: none !important;
+}
+
+nav.coin-modal-list {
+    margin-top: 25px;
+    min-height: 350px;
+    overflow: auto;
+    position: relative;
+    height: 250px;
+}
+
+/* width */
+nav.coin-modal-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+nav.coin-modal-list::-webkit-scrollbar-track {
+    background: #555;
+}
+
+/* Handle */
+nav.coin-modal-list::-webkit-scrollbar-thumb {
+    background: #3c3c3c;
+}
+
+/* Handle on hover */
+nav.coin-modal-list::-webkit-scrollbar-thumb:hover {
+    background: #3c3c3c;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.swap-loader {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    margin-left: 0;
+    top: 0;
+    margin-top: 0;
+    width: 100%;
+    height: 100%;
+    /* background: #383737b8; */
+    /* filter: blur(8px); */
+    /* -webkit-filter: blur(8px); */
+    backdrop-filter: blur(2px);
+}
+
+.swap-loader-inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swaping-page {
+    height: 100vh;
+}
+
+.swap-loader-inner img {
+    margin-top: -150px;
+}

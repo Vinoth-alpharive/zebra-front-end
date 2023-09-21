@@ -1,0 +1,42 @@
+.banner-part img {
+    width: 100%;
+}
+.banner-part img {
+    width: 100%;
+}
+
+.banner-part {
+    text-align: left;
+}
+
+.banner-part span {
+    display: block;
+    margin: 10px 0;
+    color: #596570;
+    font-weight: 500;
+}
+
+.banner-content {
+    max-width: 470px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+.banner-content h1 {margin-bottom: 0px;color: #283340;line-height: 60px;}
+
+.banner-img {
+    position: relative;
+    right: -55px;
+    top: 20px;
+}
+
+@media (max-width: 767.98px){
+
+    .banner-img{right: 0px !important;}
+
+}

@@ -1,0 +1,48 @@
+.trade-history-block .MuiGrid-root.MuiGrid-item {
+    padding-top: 0px;
+}
+
+.trade-history-block .option-btns {
+    padding: 5px 0;
+}
+
+.trade-history-block .MuiGrid-root.MuiGrid-item {
+    padding-top: 0px;
+}
+
+.trade-history-block .option-btns {
+    padding: 5px 0;
+}
+
+.tab-optns-left {
+    display: flex;
+}
+
+.option-btns.left {
+    justify-content: space-between;
+}
+
+.tab-optns-right span {
+    display: inline-block;
+    padding: 0 10px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.option-btns.right {
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.option-btns.right .tab-optns-left {
+    padding-right: 15px;
+}
+
+.order-open-book{margin-top: 0px;}
+
+.market-right-inner.right-align-white label {
+    color: #fff;
+}
+
+.market-left-left.rght-algn-ttl {
+    justify-content: flex-end;
+}

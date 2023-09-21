@@ -1,0 +1,416 @@
+body, h1, h2, h3, h4, h5, h6, button, span, label, input, p, div, td, th{
+  font-family: 'Space Grotesk', sans-serif !important;
+}
+
+/* width */
+body::-webkit-scrollbar {
+  width: 5px !important;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  background: #2e2d2d; 
+}
+ 
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: #464545; 
+}
+
+h1{font-size: 52px}
+span{font-size: 18px}
+
+ul.footer-social-list {
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+ul.footer-social-list li a {
+  display: flex;
+  align-items: center;
+}
+p.copyrights {
+  margin: 0px;
+  width: 100%;
+  text-align: center;
+  color: #C0C9D0;
+  font-weight: 500;
+  font-size: 15px !important;
+  border-top: 1px solid #C0C9D0;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.buttons-block > div {
+  padding: 10px 20px !important;
+  overflow: auto;
+  background: #18232e !important;
+}
+
+/* width */
+.buttons-block > div::-webkit-scrollbar {
+  height: 4px;
+}
+
+/* Track */
+.buttons-block > div::-webkit-scrollbar-track {
+  background: #2e2d2d; 
+}
+ 
+/* Handle */
+.buttons-block > div::-webkit-scrollbar-thumb {
+  background: #464545; 
+}
+
+.makeStyles-footercls-4{margin-top: 0px !important;}
+
+@media (max-width:767.98px){
+
+ul.footer-social-list {
+  justify-content: flex-start !important;
+}
+
+.coin-main-table-outer .MuiTabs-flexContainer {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+}
+
+@media (max-width:991.98px){
+
+  ul.header-menus {
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    flex-direction: column !important;
+    margin: 20px 0 !important;
+}
+
+}
+
+
+@media (min-width:768px) and (max-width:991.98px){
+
+.header-part.footer-part .MuiGrid-container {
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+}
+
+
+
+/** staking swapping**/
+
+.staking-page, .swaping-page, .account-page{background: #181A1A !important;}
+
+
+/** Exchange **/
+
+
+.chart-desktop, .order-open-book-desktop{display: block !important;}
+.chart-moble, .mobile-header, .order-open-book-mobile, .statusaskbidmain{display: none !important;}
+
+  @media (max-width:767.98px){
+
+    .bittrex-homepage-exchange{overflow: visible !important;}
+    #tradingview_72943 {height: 50vh !important;}
+    #tradingview_b6bc8{height: 50vh !important;}
+    .order-button-container.floating{position: relative !important;bottom: 0px !important;}
+    .bittrex-homepage-exchange{height: auto !important;}
+    /* .carouselgrid {display: none;} */
+    .scroll-part-top {max-height: initial;}
+    .order-button-container-fake-space.loggedOutButtons {flex: 0 !important;}
+    .order-component {
+      display: block;
+      overflow: hidden !important;
+      position: relative;
+  }
+.chart-desktop, .order-open-book-desktop{display: none !important;}
+.chart-moble, .mobile-header, .order-open-book-mobile, .statusaskbidmain{display: block !important;}
+.bitincrese, .bitdecrse, .bithigh {display: none;}
+.order-button-container.floating{width:auto !important}
+#tab-mobile .MuiTabs-scroller {overflow: auto !important;}
+#tab-mobile .MuiTabs-scroller::-webkit-scrollbar {display: none;}
+#tab-mobile .MuiTabs-scroller {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.dots-block svg {font-size: 13px;}
+
+.confirmation {
+  border-top: 0px !important;
+  margin-top: 0px !important;
+}
+
+.order-button-container.floating{background: rgb(13 18 25) !important;}
+.market-trade-availability {
+  padding: 15px 10px !important;
+  border-top: none !important;
+  color: rgba(255, 255, 255, 0.35) !important;
+  background-color: rgb(13 18 25) !important;
+}
+
+.mobile-header {
+  display: flex !important;
+  justify-content: space-between;
+  padding: 10PX;
+}
+
+.mobile-header {
+  display: flex !important;
+  justify-content: space-between;
+  padding: 10PX;
+}
+
+.logo {
+  width: 9%;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.header-socket-running-trade {
+  width: 79%;
+}
+
+.menu-btn.header-menu-btn {
+  width: 10%;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-btn.header-menu-btn button#demo-customized-button {
+  padding: 0px;
+  min-width: auto;
+  /* display: block !important; */
+  background: none;
+  margin-right: 0px !important;
+}
+
+.market-name-label {
+  text-align: left;
+  padding: 0 5px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+.market-info {
+  text-align: left;
+  padding: 0 5px;
+  font-size: 11px;
+  display: flex;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.estimate {
+  display: flex;
+}
+
+.market-app--market-name {
+  padding-left: 20px;
+}
+
+.confirmation{
+  padding: 0px !important;
+  margin: 8px;
+}
+/* .mobile-header .logo, .header-socket-running-trade, .mobile-header .auto-btn{display: inline-block;} */
+
+.menu-header-mobile .MuiMenu-paper{
+  left: 0px !important;
+  border-radius: 0px;
+  width: 100%;
+  max-width: initial;
+  height: 100%;
+  background: #18222f;
+  top: 50% !important;
+  margin-top: -251px !important;
+}
+
+.menu-header-mobile .MuiMenu-paper ul li {
+  color: #fff;
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+.MuiTabs-flexContainer button {
+  padding: 0 8px !important;
+}
+
+.chart-moble .MuiTabs-flexContainer {
+  margin: 0px !important;
+}
+
+.chart-moble {
+  /* margin-top: 20px; */
+  /* height: calc(100vh - 280px); */
+    /* min-height: 288px; */
+    margin-top: 0px;
+    overflow: hidden;
+}
+
+.tabcoinsleftcontain button{padding: 0.5em !important;}
+
+div#lmstol button {
+  padding: 2px 4px !important;
+}
+
+div#lmstol .MuiTabs-flexContainer {
+  max-width: 320px;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: space-between;
+}
+
+.flex-box-cmn {
+  color: #fff;
+  padding: 0 5px;
+  padding-left: 10px;
+  display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.flex-box-inner {
+  display: flex;
+  flex-direction: row;
+  font-size: 11px;
+  align-items: center;
+  height: 16px;
+}
+
+.market-info-label {margin-right: 10px;}
+
+.market-info-label {
+  color: rgba(255, 255, 255, 0.58);
+}
+
+span.value-padding {
+  opacity: 0.7;
+}
+
+.BidAskMobileStatus-cls {
+  overflow: auto;
+  height: 45px;
+  display: flex;
+  background: rgb(24 34 47);
+}
+
+span.market-info-value.directional.down, .decrse-icon-neg {
+  color: #e56846;
+}
+
+.decrse-icon-neg {
+font-size: 12px;
+position: relative;
+top: 2px;
+font-size: 12px !important;
+}
+
+form.incre-dec-box.quantity {
+  margin-bottom: 0px !important;
+}
+
+.menu-header-mobile ul li {
+  font-size: 14px;
+  padding: 0 32px;
+  height: 46px;
+}
+
+.menu-header-mobile hr.MuiDivider-root.MuiDivider-fullWidth.css-159wgzx-MuiDivider-root {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 15px 0;
+}
+
+.drop-arow-menu-sub svg {
+  color: #fff !important;
+  display: flex;
+  margin-right: 0px !important;
+  /* justify-content: flex-end; */
+  margin-left: 10px;
+}
+
+.dark-light-mode-mob {
+  height: 16px;
+  padding: 8px 10px;
+  width: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  line-height: 16px;
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 80%);
+  background-color: rgba(187, 201, 242, 0.15);
+  border-radius: 2px;
+  text-align: center;
+  margin-right: 11px;
+}
+
+.dark-light-mode-mob svg {
+  color: #fff !important;
+  margin-right: 0px !important;
+}
+
+.mobile-widget-settings {
+  display: flex;
+}
+
+.customize-btn-mob button {
+  color: white;
+  font-size: 12px;
+  line-height: 16px;
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 80%);
+  background-color: rgba(187, 201, 242, 0.15);
+  border-radius: 2px;
+  text-align: center;
+  margin-right: 11px;
+  padding: 7.5px 8px;
+  justify-content: center;
+}
+
+.customize-btn-mob button svg {
+  color: #fff !important;
+  margin-right: 0px !important;
+}
+
+.customize-btn-mob button span, .customize-btn-mob button{text-transform: none !important;}
+
+.dropdown-menus-sub ul {
+  list-style: none;
+}
+
+.dropdown-menus {
+  display: flex;
+}
+
+.menu-header-mobile ul ul li {
+  display: flex;
+  align-items: center;
+}
+
+  }
+
+
+@media (min-width:768px) and (max-width:1199.98px){
+
+
+.bittrex-homepage-exchange{
+  height: auto !important;
+  overflow: visible !important;
+}
+
+}

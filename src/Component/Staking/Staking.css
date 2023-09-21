@@ -1,0 +1,82 @@
+.straking-left-outer {
+    font-size: 15px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+}
+
+.heading-stak p {
+    margin: 0px;
+    padding: 5px 0;
+    color: #787E87;
+    text-align: left;
+}
+
+.heading-stak {
+    padding: 20px 0;
+}
+
+.straking-left {
+    margin-right: 5px;
+}
+.staking-table tr th {
+    color: #787E87;
+    font-weight: 700;
+}
+.img-name {
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.img-name img {
+    margin-right: 10px;
+}
+.img-name {
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.img-name img {
+    margin-right: 10px;
+}
+
+.percentage-est {
+    color: #46FF6F;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.days-time {
+    display: flex;
+    padding: 9px 15px;
+    width: 55px;
+    color: #FFFFFF;
+    font-size: 15px !important;
+    background: #373C3E;
+    border-radius: 9px;
+    justify-content: center;
+    align-items: center;
+}
+
+.days-time span {
+    font-size: 15px !important;
+    margin-right: 3px;
+}
+
+button.stake-button {
+    background: #46FF6F;
+    border-radius: 9px;
+    padding: 8px 40px;
+    color: #000;
+    font-weight: 700;
+}
+.staking-table {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+button.stake-button:hover {
+    background: #53d6ff;
+}

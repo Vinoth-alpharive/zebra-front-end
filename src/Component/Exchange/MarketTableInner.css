@@ -1,0 +1,15 @@
+.tab-overall button.Mui-selected, .tab-overall-content button.Mui-selected{border-radius: 5px;}
+
+.tab-overall-content .MuiTabs-flexContainer{margin: 0px !important;}
+
+/* .tab-overall-content{margin-left: -15px;} */
+
+.tab-overall-content .MuiTabs-flexContainer {
+    justify-content: space-between;
+}
+
+.tab-overall-content .MuiTabs-flexContainer button{padding-left: 10px;padding-right: 10px;}
+
+.tab-market-table .MuiBox-root {
+    padding: 10px 0;
+}
