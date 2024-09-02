@@ -310,7 +310,6 @@ export default function RightTradeTabOuter({ pairs, trade, fullpairs }) {
     // }, [])
 
     const calc_balance = async (pair) => {
-        // console.log("Amount")
         if (pair !== undefined) {
             try {
                 const addressArray = await window.ethereum.request({
