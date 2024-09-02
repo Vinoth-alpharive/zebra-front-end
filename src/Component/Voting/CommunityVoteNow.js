@@ -44,6 +44,8 @@ import governanceAddress from '../../Web3/ContractAddress/governanceAddress'
 import Web3 from 'web3';
 
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
+import loader from '../../images/loader1.gif'
+import consts from '../../Constansts';
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   height: 10,
@@ -178,6 +180,8 @@ const CommunityVoteNow = () => {
   const [wincount, setWincount] = useState(0)
   const [losscount, setlosscount] = useState(0)
 
+  const [loading, setLoading] = useState(false)
+
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -245,12 +249,16 @@ const CommunityVoteNow = () => {
           theme: "light",
         });
       } else {
+        setLoading(true)
+        await window.ethereum.request({
+          method: 'wallet_switchEthereumChain',
+          params: [{ chainId: WEB.utils.toHex(consts?.wan) }]
+        })
 
         const VotingInstance = new WEB.eth.Contract(
           votingAbi,
           governanceAddress
         );
-        console.log(vot, "asfd")
         var voteid;
         if (vot === "0") {
           voteid = 1
@@ -267,6 +275,7 @@ const CommunityVoteNow = () => {
             })
 
           if (dt?.data?.success === true) {
+            setLoading(false)
             toast.success("Vote Submitted Successfully", {
               position: "top-right",
               autoClose: 3000,
@@ -292,6 +301,7 @@ const CommunityVoteNow = () => {
           }
         }
         else {
+          setLoading(false)
           toast.error("User Cancelled Voting", {
             position: "top-right",
             autoClose: 3000,
@@ -303,160 +313,162 @@ const CommunityVoteNow = () => {
             theme: "light",
           });
         }
-
-
       }
-
     } catch (error) {
+      setLoading(false)
       console.log("🚀  error:", error)
     }
-
   }
   useEffect(() => {
     setdt(location?.state?.data)
     getData(location?.state?.data)
-    console.log("🚀 ~ file: CommunityVoteNow.js:171 ~ useEffect ~ location?.state?.data:", location?.state?.data)
 
   }, [location])
 
   return (
-    <div className='community-page'>
-      <Box sx={{ flexGrow: 1 }}>
-        <Grid container spacing={0}>
-          <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-            <Item className={classes.headercls}>
-              <Header />
-            </Item>
-          </Grid>
-
-          <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-
-            <Grid container spacing={0} className={classes.coinfourblock} id="main-top-container">
-
-              <div className='vsc-tab-cmn-left community-detail-page'>
-                <Stack direction="row" spacing={2}>
-                  <Button variant="contained" startIcon={<HowToVoteIcon />}>Vote Now</Button>
-                  <div class="community-btn-style">
-                    <Button variant="outlined" href="#contained-buttons" startIcon={<PeopleIcon />}>
-                      Community
-                    </Button>
-                  </div>
-                </Stack>
-                <h2>{data?.Title}</h2>
-              </div>
-
+    <>
+      {
+        loading === true ? <div className='swap-loader'><div className='swap-loader-inner'><img src={loader} className='loadings' /></div></div> : <></>
+      }
+      <div className='community-page'>
+        <Box sx={{ flexGrow: 1 }}>
+          <Grid container spacing={0}>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className='fixed-header'>
+              <Item className={classes.headercls}>
+                <Header />
+              </Item>
             </Grid>
 
-          </Grid>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
 
-          <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+              <Grid container spacing={0} className={classes.coinfourblock} id="main-top-container">
 
-            <Grid container spacing={0} className={classes.coinfourblock} id="voting-list-id">
-
-              <Grid item xs={12} sm={12} md={12} lg={8} xl={8} id="voting-list-id-left">
-                <Item className={classes.bgtrans}>
-
-                  <div className='vsc-tab-cmn-left community-detail-page'>
-
-                    <div class="Choices Cast-your-vote">
-                      <strong>Cast your vote</strong>
-                      <div class="Choices-inner Cast-your-vote-inner">
-                        <FormControl>
-                          <RadioGroup
-                            aria-labelledby="demo-radio-buttons-group-label"
-                            defaultValue="female"
-                            name="radio-buttons-group"
-                            onChange={(e) => { setvot(e.target.value) }}
-                          >
-                            <FormControlLabel value={0} control={<Radio />} label={data?.Choice1} />
-                            <FormControlLabel value={1} control={<Radio />} label={data?.Choice2} />
-                          </RadioGroup>
-                        </FormControl>
-                      </div>
-
-                      <Button variant="contained" className='cast-vote' onClick={() => { Vote() }} >
-                        Cast Vote
+                <div className='vsc-tab-cmn-left community-detail-page'>
+                  <Stack direction="row" spacing={2}>
+                    <Button variant="contained" startIcon={<HowToVoteIcon />}>Vote Now</Button>
+                    <div class="community-btn-style">
+                      <Button variant="outlined" href="#contained-buttons" startIcon={<PeopleIcon />}>
+                        Community
                       </Button>
                     </div>
+                  </Stack>
+                  <h2>{data?.Title}</h2>
+                </div>
 
-                  </div>
-
-                  <div class="Choices Cast-your-vote voting-list-block">
-                    <strong>Votes <span>({count})</span></strong>
-                    <div className='outer-vote-list-all' >
-                      {data?.voteList?.map((item, index) => {
-                        return (
-                          < div className='vote-list-single' key={index} >
-                            {/* <div className='vote-list-single-addrss'><Link>{item?.Address} <AssessmentIcon /></Link></div> */}
-                            <div className='vote-list-single-addrss'>{item?.Address} <AssessmentIcon /></div>
-                            <div className='vote-list-single-status'>{item?.vote}</div>
-                            <div className='vote-list-single-count'>65,141.414 <Link><OpenInNewIcon /></Link></div>
-                          </div>
-                        )
-                      })}
-
-                    </div>
-                  </div>
-                </Item>
               </Grid>
 
-              <Grid item xs={12} sm={12} md={12} lg={4} xl={4} id="voting-list-id-right" className='voting-list-id-right-cls-votenow'>
-                <Item className={classes.bgtrans}>
+            </Grid>
 
-                  <div class="Choices Cast-your-vote voting-list-block details-list">
-                    <strong>Details</strong>
-                    <div className='flex-box-ics-outer'>
-                      <div className='flex-box-ics'><label>Identifier</label><div className='vote-list-single-count'>65,141.414 <Link><OpenInNewIcon /></Link></div></div>
-                      <div className='flex-box-ics'><label>Creator</label><div className='vote-list-single-addrss'><Link>{`${owner?.slice(0, 7)}...${owner?.slice(36, 42)}`} <AssessmentIcon /></Link></div></div>
-                      <div className='flex-box-ics'><label>Snapshot</label><div className='vote-list-single-addrss'><Link>{snapshot} <AssessmentIcon /></Link></div></div>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
 
-                      <div className='vote-now-box'>
-                        <div className='vsc-tab-cmn-left community-detail-page'>
-                          <Button variant="contained" startIcon={<HowToVoteIcon />}>Vote Now</Button>
+              <Grid container spacing={0} className={classes.coinfourblock} id="voting-list-id">
+
+                <Grid item xs={12} sm={12} md={12} lg={8} xl={8} id="voting-list-id-left">
+                  <Item className={classes.bgtrans}>
+
+                    <div className='vsc-tab-cmn-left community-detail-page'>
+
+                      <div class="Choices Cast-your-vote">
+                        <strong>Cast your vote</strong>
+                        <div class="Choices-inner Cast-your-vote-inner">
+                          <FormControl>
+                            <RadioGroup
+                              aria-labelledby="demo-radio-buttons-group-label"
+                              defaultValue="female"
+                              name="radio-buttons-group"
+                              onChange={(e) => { setvot(e.target.value) }}
+                            >
+                              <FormControlLabel value={0} control={<Radio />} label={data?.Choice1} />
+                              <FormControlLabel value={1} control={<Radio />} label={data?.Choice2} />
+                            </RadioGroup>
+                          </FormControl>
                         </div>
-                        <div className='start-end-date-flex'>
-                          <span>Start Date</span> {data?.Start_Date} {data?.Start_Time}
-                        </div>
-                        <div className='start-end-date-flex'>
-                          <span>End Date</span>{data?.End_Date} {data?.End_Time}
+
+                        <Button variant="contained" className='cast-vote' onClick={() => { Vote() }} >
+                          Cast Vote
+                        </Button>
+                      </div>
+
+                    </div>
+
+                    <div class="Choices Cast-your-vote voting-list-block">
+                      <strong>Votes <span>({count})</span></strong>
+                      <div className='outer-vote-list-all' >
+                        {data?.voteList?.map((item, index) => {
+                          return (
+                            < div className='vote-list-single' key={index} >
+                              {/* <div className='vote-list-single-addrss'><Link>{item?.Address} <AssessmentIcon /></Link></div> */}
+                              <div className='vote-list-single-addrss'>{item?.Address} <AssessmentIcon /></div>
+                              <div className='vote-list-single-status'>{item?.vote}</div>
+                              <div className='vote-list-single-count'>65,141.414 <Link><OpenInNewIcon /></Link></div>
+                            </div>
+                          )
+                        })}
+
+                      </div>
+                    </div>
+                  </Item>
+                </Grid>
+
+                <Grid item xs={12} sm={12} md={12} lg={4} xl={4} id="voting-list-id-right" className='voting-list-id-right-cls-votenow'>
+                  <Item className={classes.bgtrans}>
+
+                    <div class="Choices Cast-your-vote voting-list-block details-list">
+                      <strong>Details</strong>
+                      <div className='flex-box-ics-outer'>
+                        <div className='flex-box-ics'><label>Identifier</label><div className='vote-list-single-count'>65,141.414 <Link><OpenInNewIcon /></Link></div></div>
+                        <div className='flex-box-ics'><label>Creator</label><div className='vote-list-single-addrss'><Link>{`${owner?.slice(0, 7)}...${owner?.slice(36, 42)}`} <AssessmentIcon /></Link></div></div>
+                        <div className='flex-box-ics'><label>Snapshot</label><div className='vote-list-single-addrss'><Link>{snapshot} <AssessmentIcon /></Link></div></div>
+
+                        <div className='vote-now-box'>
+                          <div className='vsc-tab-cmn-left community-detail-page'>
+                            <Button variant="contained" startIcon={<HowToVoteIcon />}>Vote Now</Button>
+                          </div>
+                          <div className='start-end-date-flex'>
+                            <span>Start Date</span> {data?.Start_Date} {data?.Start_Time}
+                          </div>
+                          <div className='start-end-date-flex'>
+                            <span>End Date</span>{data?.End_Date} {data?.End_Time}
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div class="Choices Cast-your-vote voting-list-block Current-Results">
-                    <strong>Current Results</strong>
+                    <div class="Choices Cast-your-vote voting-list-block Current-Results">
+                      <strong>Current Results</strong>
 
-                    <div className='yes-no-votes-outer'>
+                      <div className='yes-no-votes-outer'>
 
-                      <div className='yes-no-votes'>
-                        <label>{data?.Choice1}</label>
-                        <div><BorderLinearProgress variant="determinate" value={winper} /></div>
-                        <div className='vote-count-percentage'><label><span>{wincount}</span> Votes</label><span className='vote-percent'>{parseInt(winper) !== NaN ? parseInt(winper) : 0}%</span></div>
-                      </div>
+                        <div className='yes-no-votes'>
+                          <label>{data?.Choice1}</label>
+                          <div><BorderLinearProgress variant="determinate" value={winper} /></div>
+                          <div className='vote-count-percentage'><label><span>{wincount}</span> Votes</label><span className='vote-percent'>{parseInt(winper) !== NaN ? parseInt(winper) : 0}%</span></div>
+                        </div>
 
-                      <div className='yes-no-votes'>
-                        <label>{data?.Choice2}</label>
-                        <div><BorderLinearProgress variant="determinate" value={lossper} /></div>
-                        <div className='vote-count-percentage'><label><span>{losscount}</span> Votes</label><span className='vote-percent'>{parseInt(lossper) !== NaN ? parseInt(lossper) : 0}%</span></div>
+                        <div className='yes-no-votes'>
+                          <label>{data?.Choice2}</label>
+                          <div><BorderLinearProgress variant="determinate" value={lossper} /></div>
+                          <div className='vote-count-percentage'><label><span>{losscount}</span> Votes</label><span className='vote-percent'>{parseInt(lossper) !== NaN ? parseInt(lossper) : 0}%</span></div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </Item>
+                  </Item>
+                </Grid>
               </Grid>
             </Grid>
+
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+              <Item className={classes.footercls}>
+                <Footer />
+              </Item>
+            </Grid>
+
+
           </Grid>
+        </Box>
+      </div >
+    </>
 
-          <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-            <Item className={classes.footercls}>
-              <Footer />
-            </Item>
-          </Grid>
-
-
-        </Grid>
-      </Box>
-    </div >
   )
 }
 

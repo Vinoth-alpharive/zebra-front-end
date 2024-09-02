@@ -8,16 +8,22 @@
     "@ckeditor/ckeditor5-react": "^6.1.0",
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
+    "@metamask/detect-provider": "^2.0.0",
+    "@metamask/sdk-react": "^0.14.2",
+    "@mui/base": "^5.0.0-beta.16",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.3",
+    "@mui/styled-engine-sc": "^6.0.0-alpha.18",
     "@mui/styles": "^5.13.2",
-    "@mui/x-date-pickers": "^6.6.0",
+    "@mui/system": "^5.14.10",
+    "@mui/x-date-pickers": "^7.3.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "apexcharts": "^3.40.0",
     "axios": "^1.4.0",
-    "dayjs": "^1.11.9",
+    "buffer": "^6.0.3",
+    "dayjs": "^1.11.11",
     "jquery": "^3.7.0",
     "react": "^18.2.0",
     "react-apexcharts": "^1.4.0",
@@ -26,9 +32,10 @@
     "react-router-dom": "^6.11.2",
     "react-scripts": "5.0.1",
     "react-toastify": "^9.1.3",
+    "styled-components": "^6.1.9",
     "tradingview-widget": "^0.0.1",
     "web-vitals": "^2.1.4",
-    "web3": "^4.0.1"
+    "web3": "^1.8.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -49,5 +56,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {
+    "@lavamoat/allow-scripts": "^2.3.1",
+    "@types/node": "^20.4.1",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.6",
+    "typescript": "^5.1.6"
+  },
+  "proxy": "https://www.dextools.io"
 }

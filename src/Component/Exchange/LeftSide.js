@@ -70,12 +70,16 @@ const useStyles = makeStyles({
 
 });
 
-const LeftSide = ({ pairsSelected }) => {
+const LeftSide = ({ pairsSelected, fullPair }) => {
 
   const classes = useStyles();
   const pairsSelecteds = (e) => {
     // console.log(e, "e")
     pairsSelected(e)
+  }
+
+  const fullPairs = (e) => {
+    fullPair(e)
   }
 
   return (
@@ -91,7 +95,7 @@ const LeftSide = ({ pairsSelected }) => {
             />
           </Search> */}
 
-      <div className={classes.mtt}><LeftTradeTable pairsSelected={pairsSelecteds} /></div>
+      <div className={classes.mtt}><LeftTradeTable pairsSelected={pairsSelecteds} fullPairs={fullPairs} /></div>
     </>
   )
 }

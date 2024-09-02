@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import { styled } from '@mui/material/styles';
@@ -90,6 +90,10 @@ const useStyles = makeStyles({
 });
 
 const Homepage = () => {
+  useEffect(() => {
+    document.title = "Zebra Exchange "
+  }, [])
+
 
   const classes = useStyles();
 
@@ -97,7 +101,7 @@ const Homepage = () => {
     <div className='homepage-page'>
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={0}>
-          <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+          <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className='fixed-header'>
             <Item className={classes.headercls}>
               <Header />
             </Item>

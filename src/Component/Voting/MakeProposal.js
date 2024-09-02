@@ -28,6 +28,8 @@ import erc20Abi from '../../Web3/Abi/erc20.json'
 import votingAbi from '../../Web3/Abi/governanceAbi.json'
 import governanceAddress from '../../Web3/ContractAddress/governanceAddress'
 import Web3 from 'web3';
+import loader from '../../images/loader1.gif'
+import consts from '../../Constansts';
 
 const today = dayjs();
 // const yesterday = dayjs().subtract(1, 'day');
@@ -116,6 +118,7 @@ const MakeProposal = () => {
   const [endTimeerr, setendtimeerr] = useState()
   const [address1, setAddress] = useState()
 
+  const [loading, setLoading] = useState(false)
   useEffect(() => {
     geAddress()
   }, [])
@@ -149,64 +152,136 @@ const MakeProposal = () => {
       } else if (endTime === undefined) {
         setendtimeerr(" Please Select End Time")
       } else {
+        setLoading(true)
+        await window.ethereum.request({
+          method: 'wallet_switchEthereumChain',
+          params: [{ chainId: WEB.utils.toHex(consts?.eth) }]
+        })
         const routeInstances = new WEB.eth.Contract(
           erc20Abi,
-          '0x6c1cA67F2a7468F1D3EeA3cFC3D0602596eE08f0'
+          consts?.votingToken
         );
-        const sends = await routeInstances.methods.transfer('0xb84b58803e27fA018256Ef992ed2193ce56E64Fc', '10000000000000000').send({
-          from: address[0]
-        })
-        if (sends) {
-          const VotingInstance = new WEB.eth.Contract(
-            votingAbi,
-            governanceAddress
-          );
-          const creates = await VotingInstance.methods.propose([address[0]], [1], [WEB.utils.fromAscii(title.current.value)], title.current.value).send({
+        const checkbal = await routeInstances.methods.balanceOf(address[0]).call()
+        var deci = await routeInstances.methods.decimals().call()
+        if (Number(checkbal) > 0.01) {
+          const sends = await routeInstances.methods.transfer(consts?.adminAddress, consts?.votingFee).send({
             from: address[0]
           })
-          if (creates) {
-            var ids;
-            const events = await VotingInstance.getPastEvents("ProposalCreated", {
-              fromBlock: 0,
-              toBlock: "latest"
-            });
-            for (let i = 0; i < events.length; i++) {
-              const element = events[i];
-              if (creates?.blockHash === element?.blockHash) {
-                ids = element?.returnValues[0]
-              }
-            }
-            const startdate = `${startDate?.getFullYear()}-${startDate?.getMonth() + 1}-${startDate?.getDate()}`
-            const enddate = `${endDate?.getFullYear()}-${endDate?.getMonth() + 1}-${endDate?.getDate()}`
-            const starttime = `${startTime?.getHours()}:${startTime?.getMinutes()}`
-            const endtime = `${endTime?.getHours()}:${endTime?.getMinutes()}`
-            const { data } = await Axios.post(`/users/createVoting`, {
-              Title: title.current.value,
-              Content: description,
-              Choice1: choice1.current.value,
-              Choice2: choice2.current.value,
-              Start_Date: startdate,
-              Start_Time: starttime,
-              End_Date: enddate,
-              End_Time: endtime,
-              Address: address[0],
-              Proposal_Id: ids.toString()
+          if (sends) {
+            await window.ethereum.request({
+              method: 'wallet_switchEthereumChain',
+              params: [{ chainId: WEB.utils.toHex(consts?.wan) }]
             })
-            if (data?.success === true) {
-              navigate(`/voting`)
-              toast.success(data?.message, {
-                position: "top-right",
-                autoClose: 3000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
+            const VotingInstance = new WEB.eth.Contract(
+              votingAbi,
+              governanceAddress
+            );
+            const creates = await VotingInstance.methods.propose([address[0]], [1], [WEB.utils.fromAscii(title.current.value)], title.current.value).send({
+              from: address[0]
+            })
+            if (creates) {
+              var ids;
+              const events = await VotingInstance.getPastEvents("ProposalCreated", {
+                fromBlock: 0,
+                toBlock: "latest"
               });
+              for (let i = 0; i < events.length; i++) {
+                const element = events[i];
+                if (creates?.blockHash === element?.blockHash) {
+                  ids = element?.returnValues[0]
+                }
+              }
 
+              var startdate = `${startDate?.getFullYear()}-${startDate?.getMonth() + 1}-${startDate?.getDate()}`
+              var enddate = `${endDate?.getFullYear()}-${endDate?.getMonth() + 1}-${endDate?.getDate()}`
+              var starttime = `${startTime?.getHours()}:${startTime?.getMinutes()}`
+              var endtime = `${endTime?.getHours()}:${endTime?.getMinutes()}`
+
+              function formatDateToMongoDBFormat(dateString, timeString) {
+                var combinedDateTimeString = `${dateString}T${timeString}`;
+                var dateObject = new Date(combinedDateTimeString);
+                var formattedDate = dateObject.toISOString().replace(/\.\d+/, '');
+                return formattedDate;
+              }
+
+              var d = startdate.split('-')[1].length
+              var d1 = enddate.split('-')[1].length
+
+              var ds = startdate.split('-')[2].length
+              var ds1 = enddate.split('-')[2].length
+
+              if (d === 1) {
+                startdate = `${startdate.split('-')[0]}-0${startdate.split('-')[1]}-${startdate.split('-')[2]}`
+              }
+              if (d1 === 1) {
+                enddate = `${enddate.split('-')[0]}-0${enddate.split('-')[1]}-${enddate.split('-')[2]}`
+              }
+
+              if (ds === 1) {
+                startdate = `${startdate.split('-')[0]}-${startdate.split('-')[1]}-0${startdate.split('-')[2]}`
+              }
+              if (ds1 === 1) {
+                enddate = `${enddate.split('-')[0]}-${enddate.split('-')[1]}-0${enddate.split('-')[2]}`
+              }
+
+              var ts = starttime.split(':')[1].length
+              var ts1 = endtime.split(':')[1].length
+
+              if (ts === 1) {
+                starttime = `${starttime.split(':')[0]}:0${starttime.split(':')[1]}`
+              }
+              if (ts1 === 1) {
+                endtime = `${endtime.split(':')[0]}:0${endtime.split(':')[1]}`
+              }
+              var formattedDate = formatDateToMongoDBFormat(startdate, starttime);
+              var formattedDate1 = formatDateToMongoDBFormat(enddate, endtime);
+              var startTimeStamp = new Date(formattedDate).getTime()
+              var endTimeStamp = new Date(formattedDate1).getTime()
+
+              const { data } = await Axios.post(`/users/createVoting`, {
+                Title: title.current.value,
+                Content: description,
+                Choice1: choice1.current.value,
+                Choice2: choice2.current.value,
+                Start_Date: startdate,
+                Start_Time: starttime,
+                End_Date: enddate,
+                End_Time: endtime,
+                startTimeStamp: startTimeStamp,
+                endTimeStamp: endTimeStamp,
+                Address: address[0],
+                Proposal_Id: ids.toString()
+              })
+              if (data?.success === true) {
+                navigate(`/voting`)
+                setLoading(false)
+                toast.success(data?.message, {
+                  position: "top-right",
+                  autoClose: 3000,
+                  hideProgressBar: false,
+                  closeOnClick: true,
+                  pauseOnHover: true,
+                  draggable: true,
+                  progress: undefined,
+                  theme: "light",
+                });
+
+              } else {
+                setLoading(false)
+                toast.success("Something Went Wrong", {
+                  position: "top-right",
+                  autoClose: 3000,
+                  hideProgressBar: false,
+                  closeOnClick: true,
+                  pauseOnHover: true,
+                  draggable: true,
+                  progress: undefined,
+                  theme: "light",
+                });
+              }
             } else {
-              toast.success("Something Went Wrong", {
+              setLoading(false)
+              toast.error("Voting Cancelled", {
                 position: "top-right",
                 autoClose: 3000,
                 hideProgressBar: false,
@@ -218,7 +293,8 @@ const MakeProposal = () => {
               });
             }
           } else {
-            toast.success("Voting Cancelled", {
+            setLoading(false)
+            toast.error("Your Balance is Low", {
               position: "top-right",
               autoClose: 3000,
               hideProgressBar: false,
@@ -228,9 +304,11 @@ const MakeProposal = () => {
               progress: undefined,
               theme: "light",
             });
+
           }
         } else {
-          toast.success("Your Balance is Low", {
+          setLoading(false)
+          toast.error("Your Balance is Low", {
             position: "top-right",
             autoClose: 3000,
             hideProgressBar: false,
@@ -240,10 +318,10 @@ const MakeProposal = () => {
             progress: undefined,
             theme: "light",
           });
-
         }
       }
     } catch (error) {
+      setLoading(false)
       console.log("🚀  error:", error)
 
     }
@@ -251,164 +329,170 @@ const MakeProposal = () => {
 
 
   return (
-    <div className='community-page make-proposal-page'>
-      <Box sx={{ flexGrow: 1 }}>
-        <Grid container spacing={0}>
-          <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-            <Item className={classes.headercls}>
-              <Header />
-            </Item>
-          </Grid>
+    <>
+      {
+        loading === true ? <div className='swap-loader'><div className='swap-loader-inner'><img src={loader} className='loadings' /></div></div> : <></>
+      }
+      <div className='community-page make-proposal-page'>
+        <Box sx={{ flexGrow: 1 }}>
+          <Grid container spacing={0}>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className='fixed-header'>
+              <Item className={classes.headercls}>
+                <Header />
+              </Item>
+            </Grid>
 
 
 
-          <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-            <Item className={classes.headercls}>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+              <Item className={classes.headercls}>
 
-              <Grid container spacing={0} className={classes.coinfourblock} id="main-top-container">
+                <Grid container spacing={0} className={classes.coinfourblock} id="main-top-container">
 
-                <Grid item xs={12} sm={12} md={12} lg={12} xl={12} >
-                  <div className='left-make-proposal'>
-                    <Link className="back-to-page-btn" to='/voting' ><ArrowBackIcon /> Back to Vote Overview</Link>
-                  </div>
-                </Grid>
-
-                <Grid item xs={12} sm={12} md={12} lg={8} xl={8}>
-                  <Item className={classes.headercls}>
-
-
-
+                  <Grid item xs={12} sm={12} md={12} lg={12} xl={12} >
                     <div className='left-make-proposal'>
-
-                      <div className='Title'>
-                        <strong>Title</strong>
-                        <input id="name" name="name" scale="lg" required="" class="Title" ref={title} onChange={() => { setatitleerr("") }} ></input>
-                        {titleerr !== "" ? <p style={{ color: 'red' }} >{titleerr}</p> : <></>}
-                      </div>
-                      <div className='Content'>
-                        <strong>Content</strong>
-                        <p>Tip: write in Markdown!</p>
-
-                        <CKEditor
-                          editor={ClassicEditor}
-                          data="<p>Hello from CKEditor&nbsp;5!</p>"
-                          style={{ color: "black" }}
-                          onReady={editor => {
-                            // You can store the "editor" and use when it is needed.
-                          }}
-                          onChange={(event, editor) => {
-                            setdescriptionerr("")
-                            const data = editor.getData();
-                            setDiscription(data)
-                          }}
-                          onBlur={(event, editor) => {
-                          }}
-                          onFocus={(event, editor) => {
-                          }}
-                        />
-                        {descriptionerr !== "" ? <p style={{ color: 'red' }} >{descriptionerr}</p> : <></>}
-                      </div>
-
-                      <div className='Choices'>
-                        <strong>Choices</strong>
-                        <div className='Choices-inner'>
-                          <TextField id="filled-basic" placeholder="choice-1" variant="filled" inputRef={choice1} onChange={() => { setchoice1err("") }} />
-                          {choice1err !== "" ? <p style={{ color: 'red' }} >{choice1err}</p> : <></>}
-                        </div>
-                        <div className='Choices-inner'>
-                          <TextField id="filled-basic" placeholder="choice-2" variant="filled" inputRef={choice2} onChange={() => { setchoice2err("") }} />
-                          {choice2err !== "" ? <p style={{ color: 'red' }} >{choice2err}</p> : <></>}
-                        </div>
-                        {/* <div className="add-choices-outer"><Button variant="contained" className="add-choices">Add Choices</Button></div> */}
-                      </div>
+                      <Link className="back-to-page-btn" to='/voting' ><ArrowBackIcon /> Back to Vote Overview</Link>
                     </div>
+                  </Grid>
 
-                  </Item>
+                  <Grid item xs={12} sm={12} md={12} lg={8} xl={8}>
+                    <Item className={classes.headercls}>
+
+
+
+                      <div className='left-make-proposal'>
+
+                        <div className='Title'>
+                          <strong>Title</strong>
+                          <input id="name" name="name" scale="lg" required="" class="Title" ref={title} onChange={() => { setatitleerr("") }} ></input>
+                          {titleerr !== "" ? <p style={{ color: 'red' }} >{titleerr}</p> : <></>}
+                        </div>
+                        <div className='Content'>
+                          <strong>Content</strong>
+                          <p>Tip: write in Markdown!</p>
+
+                          <CKEditor
+                            editor={ClassicEditor}
+                            data="<p>Hello from CKEditor&nbsp;5!</p>"
+                            style={{ color: "black" }}
+                            onReady={editor => {
+                              // You can store the "editor" and use when it is needed.
+                            }}
+                            onChange={(event, editor) => {
+                              setdescriptionerr("")
+                              const data = editor.getData();
+                              setDiscription(data)
+                            }}
+                            onBlur={(event, editor) => {
+                            }}
+                            onFocus={(event, editor) => {
+                            }}
+                          />
+                          {descriptionerr !== "" ? <p style={{ color: 'red' }} >{descriptionerr}</p> : <></>}
+                        </div>
+
+                        <div className='Choices'>
+                          <strong>Choices</strong>
+                          <div className='Choices-inner'>
+                            <TextField id="filled-basic" placeholder="choice-1" variant="filled" inputRef={choice1} onChange={() => { setchoice1err("") }} />
+                            {choice1err !== "" ? <p style={{ color: 'red' }} >{choice1err}</p> : <></>}
+                          </div>
+                          <div className='Choices-inner'>
+                            <TextField id="filled-basic" placeholder="choice-2" variant="filled" inputRef={choice2} onChange={() => { setchoice2err("") }} />
+                            {choice2err !== "" ? <p style={{ color: 'red' }} >{choice2err}</p> : <></>}
+                          </div>
+                          {/* <div className="add-choices-outer"><Button variant="contained" className="add-choices">Add Choices</Button></div> */}
+                        </div>
+                      </div>
+
+                    </Item>
+                  </Grid>
+
+                  <Grid item xs={12} sm={12} md={12} lg={4} xl={4}>
+                    <Item className={classes.headercls}>
+
+                      <div className='right-make-proposal'>
+
+                        <div className='Title Choices'>
+                          <strong>Actions</strong>
+
+                          <div className='inner-pading-24px'>
+
+                            <div className='date'>
+                              <label>START DATE</label>
+                              <div className='date-block-style'>
+                                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                                  <DatePicker onChange={(e) => { setStartDate(e?.$d); setstartdateerr("") }} />
+                                </LocalizationProvider>
+                              </div>
+                              {startdateerr !== "" ? <p style={{ color: 'red' }} >{startdateerr}</p> : <></>}
+                            </div>
+
+                            <div className='date'>
+                              <label>START TIME</label>
+                              <div className='date-block-style'>
+                                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                                  <TimePicker defaultValue={todayStartOfTheDay} disablePast onChange={(e) => { setStartTime(e?.$d); setstarttimeerr("") }} />
+                                </LocalizationProvider>
+                              </div>
+                              {startTimeerr !== "" ? <p style={{ color: 'red' }} >{startTimeerr}</p> : <></>}
+                            </div>
+
+                            <div className='date'>
+                              <label>END DATE</label>
+                              <div className='date-block-style'>
+                                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                                  <DatePicker onChange={(e) => { setEndDate(e?.$d); setenddateerr("") }} />
+                                </LocalizationProvider>
+                              </div>
+                              {enddateerr !== "" ? <p style={{ color: 'red' }} >{enddateerr}</p> : <></>}
+                            </div>
+
+                            <div className='date'>
+                              <label>END TIME</label>
+                              <div className='date-block-style'>
+                                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                                  <TimePicker defaultValue={todayStartOfTheDay} disablePast onChange={(e) => { setEndTime(e?.$d); setendtimeerr("") }} />
+                                </LocalizationProvider>
+                              </div>
+                              {endTimeerr !== "" ? <p style={{ color: 'red' }} >{endTimeerr}</p> : <></>}
+                            </div>
+
+                            <div className='cretor-snapshot-block'><label>Creator:</label><span>{address1}</span></div>
+                            {/* <div className='cretor-snapshot-block'><label>Snapshot:</label><span>30701510</span></div> */}
+
+                            <Button variant="contained" className='publish-btn' onClick={() => { Propasal() }} >Publish</Button>
+
+                            {/* <p className="note-note">You need at least 10 voting power to publish a proposal.</p> */}
+
+                          </div>
+
+                        </div>
+
+
+
+                      </div>
+
+                    </Item>
+                  </Grid>
+
+
                 </Grid>
 
-                <Grid item xs={12} sm={12} md={12} lg={4} xl={4}>
-                  <Item className={classes.headercls}>
+              </Item>
+            </Grid>
 
-                    <div className='right-make-proposal'>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+              <Item className={classes.footercls}>
+                <Footer />
+              </Item>
+            </Grid>
 
-                      <div className='Title Choices'>
-                        <strong>Actions</strong>
-
-                        <div className='inner-pading-24px'>
-
-                          <div className='date'>
-                            <label>START DATE</label>
-                            <div className='date-block-style'>
-                              <LocalizationProvider dateAdapter={AdapterDayjs}>
-                                <DatePicker onChange={(e) => { setStartDate(e?.$d); setstartdateerr("") }} />
-                              </LocalizationProvider>
-                            </div>
-                            {startdateerr !== "" ? <p style={{ color: 'red' }} >{startdateerr}</p> : <></>}
-                          </div>
-
-                          <div className='date'>
-                            <label>START TIME</label>
-                            <div className='date-block-style'>
-                              <LocalizationProvider dateAdapter={AdapterDayjs}>
-                                <TimePicker defaultValue={todayStartOfTheDay} disablePast onChange={(e) => { setStartTime(e?.$d); setstarttimeerr("") }} />
-                              </LocalizationProvider>
-                            </div>
-                            {startTimeerr !== "" ? <p style={{ color: 'red' }} >{startTimeerr}</p> : <></>}
-                          </div>
-
-                          <div className='date'>
-                            <label>END DATE</label>
-                            <div className='date-block-style'>
-                              <LocalizationProvider dateAdapter={AdapterDayjs}>
-                                <DatePicker onChange={(e) => { setEndDate(e?.$d); setenddateerr("") }} />
-                              </LocalizationProvider>
-                            </div>
-                            {enddateerr !== "" ? <p style={{ color: 'red' }} >{enddateerr}</p> : <></>}
-                          </div>
-
-                          <div className='date'>
-                            <label>END TIME</label>
-                            <div className='date-block-style'>
-                              <LocalizationProvider dateAdapter={AdapterDayjs}>
-                                <TimePicker defaultValue={todayStartOfTheDay} disablePast onChange={(e) => { setEndTime(e?.$d); setendtimeerr("") }} />
-                              </LocalizationProvider>
-                            </div>
-                            {endTimeerr !== "" ? <p style={{ color: 'red' }} >{endTimeerr}</p> : <></>}
-                          </div>
-
-                          <div className='cretor-snapshot-block'><label>Creator:</label><span>{address1}</span></div>
-                          {/* <div className='cretor-snapshot-block'><label>Snapshot:</label><span>30701510</span></div> */}
-
-                          <Button variant="contained" className='publish-btn' onClick={() => { Propasal() }} >Publish</Button>
-
-                          {/* <p className="note-note">You need at least 10 voting power to publish a proposal.</p> */}
-
-                        </div>
-
-                      </div>
-
-
-
-                    </div>
-
-                  </Item>
-                </Grid>
-
-
-              </Grid>
-
-            </Item>
           </Grid>
+        </Box>
+      </div>
+    </>
 
-          <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-            <Item className={classes.footercls}>
-              <Footer />
-            </Item>
-          </Grid>
-
-        </Grid>
-      </Box>
-    </div>
   )
 }
 

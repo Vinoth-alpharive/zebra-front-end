@@ -1,0 +1,29 @@
+.upload-file {
+    border: 1px solid #dadce0 !important;
+    color: #3f97ea !important;
+    margin-top: 30px !important;
+}
+.upload-link {
+    margin-top: 15px;
+}
+.upload-link a{
+    color: #3f97ea;
+}
+.general-info-box:first-child{
+    border-radius: 0 0 10px 10px;
+    border: none !important;
+}
+.back-form a {
+    display: flex;
+    gap: 5px;
+    text-decoration: none;
+    color: #000;
+    align-items: center;
+    font-size: 15px;
+}
+
+.back-form {
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}

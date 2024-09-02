@@ -97,7 +97,7 @@ const EarnCrypto = () => {
     <div className='crypto-currency-page'>
       <Box sx={{ flexGrow: 1 }}>
     <Grid container spacing={0}>
-    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+    <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className='fixed-header'>
     <Item className={classes.headercls}>
         <Header />
     </Item>

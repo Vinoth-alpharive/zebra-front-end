@@ -115,6 +115,9 @@ const useStyles = makeStyles({
 });
 
 const Voting = () => {
+  useEffect(() => {
+    document.title = "Zebra Exchange | Voting"
+  }, [])
 
   const classes = useStyles();
   const navigate = useNavigate()
@@ -152,9 +155,12 @@ const Voting = () => {
 
   const getData = async () => {
     try {
-      const { data } = await Axios.post(`users/getVotings`, { id: val })
+      const { data } = await Axios.post(`users/getVotings`, { id: val, data: new Date().getTime() })
       if (data?.success === true) {
+
+        // if (data?.result?.length > 0) {
         setdata(data?.result)
+        // }
       }
     } catch (error) {
       console.log("error:", error)
@@ -173,7 +179,7 @@ const Voting = () => {
     <div className='voting-page'>
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={0}>
-          <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+          <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className='fixed-header'>
             <Item className={classes.headercls}>
               <Header />
             </Item>

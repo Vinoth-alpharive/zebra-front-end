@@ -206,7 +206,7 @@ const OrderBookTable = ({ tr }) => {
     });
     const { data } = await Axios.post(`/users/TradeHistory`, {
       user: account[0],
-      pair: token
+      pair: token ? token : "wanUSDT_WWAN"
     })
     const dts = []
     const dts1 = []

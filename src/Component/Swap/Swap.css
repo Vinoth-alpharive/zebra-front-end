@@ -24,7 +24,7 @@ p.swap-para {
     background: transparent;
     border: none;
     outline: none;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 500;
     color: #fff;
 }
@@ -164,7 +164,7 @@ h3.select-token-head-modal {
 span.select-token-head-modal-close {
     display: inline-block;
     text-align: right !important;
-    width: 100%;
+    /* width: 97%; */
 }
 
 span.select-token-head-modal-close svg {
@@ -177,8 +177,13 @@ span.select-token-head-modal-close svg {
 span.select-token-head-modal-close svg {
     color: #fff;
     border-radius: 50%;
-    font-size: 34px;
+    font-size: 25px;
     margin-top: -5px;
+    cursor: pointer;
+    position: fixed;
+    top: 24px;
+    right: 33px;
+    background: #2c2a2a;
 }
 
 nav.coin-modal-list li a {
@@ -273,4 +278,9 @@ input[type=number] {
 
 .swap-loader-inner img {
     margin-top: -150px;
+}
+
+.blockchains {
+    display: flex;
+    justify-content: flex-end;
 }

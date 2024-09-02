@@ -12,13 +12,17 @@ import EarnCryptoDetail from './Component/EarnCrypto/EarnCryptoDetail';
 import KYCForm from './Component/KYCForm/KYCForm';
 import Notfound from './Component/Notfound';
 import Farms from './Component/Farms/Farms';
+import EarnCryptoBanner from './Component/EarnCrypto/EarnCryptoBanner'
 import Liquidstaking from './Component/Liquidstaking/Liquidstaking';
 import Voting from './Component/Voting/Voting';
 import MakeProposal from './Component/Voting/MakeProposal';
 import CommunityVoteNow from './Component/Voting/CommunityVoteNow';
 import CommunityClosed from './Component/Voting/CommunityClosed';
 import CoreClosed from './Component/Voting/CoreClosed';
-
+import ApplicationForm from './Component/ApplicationForm/ApplicationForm';
+import DocumentUpload from './Component/DocumentUpload/DocumentUpload';
+import Launchpad from './Component/Launchpad/launchpad';
+import Creates from './Component/Launchpad/Creates';
 
 function App() {
   return (
@@ -27,6 +31,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Homepage />} />
           <Route path='/application' element={<Application />} />
+          <Route path='/exchange' element={<Exchange />} />
           <Route path='/exchange/:token' element={<Exchange />} />
           <Route path='/swap' element={<Swap />} />
           <Route path='/staking' element={<Staking />} />
@@ -37,12 +42,18 @@ function App() {
           <Route path="/kyc-verification" element={<KYCForm />} />
           <Route path="*" element={<Notfound />} />
           <Route path="/farms" element={<Farms />} />
+          <Route path="/EarnCryptoBanner" element={<EarnCryptoBanner />} />
           <Route path="/liquidstaking" element={<Liquidstaking />} />
           <Route path="/voting" element={<Voting />} />
+          <Route path="/launchpad" element={<Launchpad />} />
           <Route path="/communityClosed" element={<CommunityClosed />} />
           <Route path="/core" element={<CoreClosed />} />
           <Route path="/communityvotenow" element={<CommunityVoteNow />} />
           <Route path="/makeproposal" element={<MakeProposal />} />
+          <Route path="/applicationform" element={<ApplicationForm />} />
+          <Route path="/documentupload" element={<DocumentUpload />} />
+          <Route path="/creates" element={<Creates />} />
+
         </Routes>
       </Router>
     </div>

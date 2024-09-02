@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import { styled } from '@mui/material/styles';
@@ -33,6 +33,8 @@ const useStyles = makeStyles({
     borderRadius: '0px !important',
     boxShadow: 'none !important',
     padding: '20px 55px !important',
+    background: 'transparent !important',
+    borderBottom: '1px solid #373c3e',
     '@media (max-width: 991.98px)': {
       padding: '20px 10px !important',
     }
@@ -63,6 +65,7 @@ const useStyles = makeStyles({
     borderRadius: '0px !important',
     boxShadow: 'none !important',
     padding: '20px 55px !important',
+    background: 'transparent !important',
     '@media (max-width: 991.98px)': {
       padding: '20px !important',
     }
@@ -90,6 +93,9 @@ const useStyles = makeStyles({
 });
 
 const Application = () => {
+  useEffect(() => {
+    document.title = "Zebra Exchange | Application"
+  }, [])
 
   const classes = useStyles();
 
@@ -97,13 +103,13 @@ const Application = () => {
     <div className='crypto-currency-page'>
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={0}>
-          <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+          <Grid item xs={12} sm={12} md={12} lg={12} xl={12}  className='fixed-header'>
             <Item className={classes.headercls}>
               <Header />
             </Item>
           </Grid>
 
-          <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+          {/* <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
             <Item className={classes.cryptobannercls}>
               <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={0} className={classes.coinfourblock}>
@@ -123,7 +129,7 @@ const Application = () => {
                 </Grid>
               </Box>
             </Item>
-          </Grid>
+          </Grid> */}
 
           <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
             <Item className={classes.coinsblock}>

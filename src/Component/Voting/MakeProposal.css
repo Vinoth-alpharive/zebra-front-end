@@ -1,5 +1,5 @@
 .left-make-proposal strong, .right-make-proposal strong {
-    color: #280d5f;
+    color: #fff;
     display: block;
     font-weight: 600;
     margin-bottom: 8px;
@@ -8,10 +8,10 @@
 }
 
 .Title input, .right-make-proposal input {
-    background-color: #eeeaf4;
+    background-color: #18222f;
     border-radius: 16px;
     box-shadow: inset 0px 2px 2px -1px rgba(74,74,104,.1);
-    color: #280d5f;
+    color: #fff;
     display: block;
     font-size: 16px;
     height: 48px;
@@ -93,7 +93,8 @@ p.note-note {
 
 .Choices strong {
     margin-bottom: 0px;
-    background: linear-gradient(111.68deg,#f2ecf2,#e8f2f6);
+    /* background: linear-gradient(111.68deg,#f2ecf2,#e8f2f6); */
+    background: #282e36;
     border-radius: 24px 24px 0px 0px;
     padding: 24px;
 }
@@ -103,10 +104,10 @@ p.note-note {
 }
 
 .Choices-inner input {
-    background-color: #eeeaf4;
+    background-color: transparent;
     border-radius: 16px;
     box-shadow: inset 0px 2px 2px -1px rgba(74,74,104,.1);
-    color: #280d5f;
+    color: #fff;
     display: block;
     font-size: 16px;
     height: 48px;
@@ -163,7 +164,9 @@ a.back-to-page-btn {
 }
 
 .date .MuiInputBase-root.MuiOutlinedInput-root {
-    background: #eeeaf4;
+    background: transparent;
+    border: 1px solid #eeeaf4;
+    border-radius: 10px;
 }
 
 .date input {
@@ -173,8 +176,9 @@ a.back-to-page-btn {
 .ck.ck-content.ck-editor__editable.ck-rounded-corners p {
     color: #000;
 }
-
-
+.date .MuiInputBase-root.MuiOutlinedInput-root button svg path{
+    fill: #fff;
+}
 
 
 @media (max-width:991.98px){

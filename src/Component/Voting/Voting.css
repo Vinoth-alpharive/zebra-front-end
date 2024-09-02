@@ -5,6 +5,7 @@ div#bd-img-breadcum {
     background-position: center;
     border-radius: 0px !important;
     padding: 20px 55px !important;
+    border-bottom: 1px solid #fff;
 }
 
 div#bd-img-breadcum h2 {
@@ -72,8 +73,8 @@ div#voting-id-body {
 
 div#voting-id-body button {
     padding: 8px;
-    border-radius: 16px 16px 0px 0px;
-    font-size: 18px;
+    border-radius: 25px;
+    font-size: 16px;
     font-weight: 600;
     color: #7a6eaa;
 }
@@ -87,9 +88,10 @@ div#voting-id-body .MuiBox-root {
 }
 
 .cca-outer {
-    background-color: #eeeaf4;
+    background-color: #18222f;
     padding: 16px 16px 0px !important;
-    border-radius: 16px 16px 0 0
+    border-radius: 16px 16px 0 0;
+    border-bottom: 1px solid #fff !important;
 }
 
 div#voting-id-body .Mui-selected {
@@ -97,7 +99,7 @@ div#voting-id-body .Mui-selected {
 }
 
 .vsc-outer {
-    border-bottom: 1px solid #e7e3eb !important;
+    /* border-bottom: 1px solid #e7e3eb !important; */
     padding: 14px 0px 14px 24px !important;
 }
 
@@ -107,7 +109,7 @@ div#voting-id-body .Mui-selected {
 }
 
 .vsc-outer {
-    border-bottom: 1px solid #e7e3eb !important;
+    /* border-bottom: 1px solid #e7e3eb !important; */
     padding: 14px 0px 14px 24px !important;
 }
 
@@ -119,7 +121,7 @@ div#voting-id-body .Mui-selected {
 .vsc-tab-cmn-left strong {
     font-size: 20px;
     text-align: left;
-    color: #000;
+    color: #fff;
 }
 
 .vsc-tab-cmn-left {
@@ -129,6 +131,7 @@ div#voting-id-body .Mui-selected {
 p.vsc-tab-cmn-duration {
     margin: 10px 0px 18px;
     font-size: 18px;
+    color: #fff;
 }
 
 .vsc-tab-cmn {
@@ -165,7 +168,7 @@ vsc-tab-cmn-left a {
 
 .vsc-tab-cmn-right svg {
     font-size: 30px;
-    color: #000;
+    color: #fff;
 }
 
 .vsc-tab-cmn:last-child {
@@ -494,7 +497,7 @@ div#voting-mid-body-inner {
 }
 
 .cca-outer-tab {
-    background: #fff;
+    background: #373c3eba ;
 }
 
 .vote-list-single-status {
@@ -621,7 +624,7 @@ div#voting-mid-body-inner {
     }
 
     .vsc-outer {
-        border-bottom: 1px solid #e7e3eb !important;
+        /* border-bottom: 1px solid #e7e3eb !important; */
         padding: 10px !important;
     }
 

@@ -9,8 +9,8 @@ services:
       # - 443:443
     volumes:
       - ./template:/etc/nginx/nginx.conf
-      # - ./ssl/cifdaq.crt:/ssl/server.crt
-      # - ./ssl/private.key:/ssl/server.key
+      - ./ssl/zebra.crt:/ssl/server.crt
+      - ./ssl/private.key:/ssl/server.key
 
     networks:
       - default

@@ -6,6 +6,7 @@ ul.header-menus {
     justify-content: center;
     gap: 30px;
     align-items: center;
+    white-space: nowrap;
 }
 
 ul.header-menus li a {
@@ -68,7 +69,44 @@ tr.market-search-tab th {
     border-bottom: none;
 }
 
-@media (max-width:991.98px){
+ul.header-menus li a.active, button#border-bottom-cls {
+    position: relative;
+}
+
+ul.header-menus li a.active::before, button#border-bottom-cls::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #939393;
+    bottom: -8px;
+    transition: all 0.3 ease-in-out;
+}
+body.scrolled .fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background: #000;
+    box-shadow: 0 5px 16px #53d6ff14;
+    backdrop-filter: blur(10px);
+    animation: slideDown 0.60s ease-out;
+}
+@keyframes slideDown{
+    0% {
+        transform: translateY(-90%);
+    }
+    
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width:1199.98px){
+
+    ul.header-menus li a.active::before, button#border-bottom-cls::before{display: none;}
+
+    ul.header-menus li a.active, button#border-bottom-cls{color: #ccc;}
 
 .menu-toggle-icon{display: block !important;}
 
@@ -84,6 +122,12 @@ nav.menu-block-header{display: none !important;}
     display: block !important;
     transition: all 0.3s ease-in-out;
     transform: translateX(-100%);
+}
+ul.header-menus {
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    flex-direction: column !important;
+    margin: 20px 0 !important;
 }
 
 nav#active.menu-block-header-mobile {
@@ -120,6 +164,7 @@ nav.menu-block-header-mobile ul.header-menus li {
 
 .menu-mobile-close-part .close-menu svg {
     color: #fff;
+    background: none;
 }
 
 .menu-mobile-close-part {
@@ -172,17 +217,25 @@ nav#active.menu-block-header-mobile {
 .menu-toggle-icon svg {
     color: #fff;
 }
+body.scrolled .fixed-header {
+    animation: none;
+}
+.menu-block-header-mobile {
+    /* height: 100%; */
+    height: 850px !important;
+}
 
+}
+
+
+@media(max-width:575.98px){
+    
 .header-part.header-section .MuiGrid-container.header-container-block {
     flex-direction: column !important;
     justify-content: flex-start !important;
     align-items: flex-start;
 }
-
 }
-
-
-
 
 @media (min-width:992px) and (max-width:1199.98px){
 
@@ -191,7 +244,16 @@ nav#active.menu-block-header-mobile {
         flex-wrap: nowrap;
         align-items: center;
     }
-
+    ul.header-menus{
+        gap: 23px;
+    }
+    .create-list{
+        width: 92% !important;
+    }
+    .buy-swap {
+        height: 80vh !important;
+        overflow: scroll !important;
+    }
 }
 
 .add-font{
@@ -205,4 +267,5 @@ nav#active.menu-block-header-mobile {
     font-weight: 700;
     color: #596570;
     font-family: 'Space Grotesk', sans-serif !important;
+    padding: 0px;
 }

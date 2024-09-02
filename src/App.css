@@ -3,22 +3,26 @@ body, h1, h2, h3, h4, h5, h6, button, span, label, input, p, div, td, th{
 }
 
 /* width */
-body::-webkit-scrollbar {
-  width: 5px !important;
+::-webkit-scrollbar {
+  width: 4px !important;
+  height: 3px !important;
 }
 
 /* Track */
-body::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   background: #2e2d2d; 
 }
  
 /* Handle */
-body::-webkit-scrollbar-thumb {
-  background: #464545; 
+::-webkit-scrollbar-thumb {
+  background: #ffffff; 
 }
 
 h1{font-size: 52px}
-span{font-size: 18px}
+span{
+  font-size: 18px;
+  word-break: break-word;
+}
 
 ul.footer-social-list {
   padding: 0px;
@@ -94,20 +98,13 @@ ul.footer-social-list {
 }
 
 
-@media (min-width:768px) and (max-width:991.98px){
 
-.header-part.footer-part .MuiGrid-container {
-  flex-wrap: nowrap;
-  align-items: center;
-}
-
-}
 
 
 
 /** staking swapping**/
 
-.staking-page, .swaping-page, .account-page{background: #181A1A !important;}
+.staking-page, .swaping-page, .account-page, .crypto-currency-page{background: #181A1A !important;}
 
 
 /** Exchange **/
@@ -411,6 +408,14 @@ form.incre-dec-box.quantity {
 .bittrex-homepage-exchange{
   height: auto !important;
   overflow: visible !important;
+}
+
+.header-part.footer-part .MuiGrid-container {
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.header-part.footer-part ul.header-menus {
+  flex-direction: row !important;
 }
 
 }

@@ -126,8 +126,13 @@ span.MuiTabs-indicator {
     color: #fff;
     border: none;
     padding: 0px !important;
-    height: 28px;
+    /* height: 28px; */
     font-size: 12px;
+    line-height: 18px;
+    flex-grow: 1;
+    width: 100px;
+    flex-basis: auto;
+    flex-shrink: 0;
 }
 
 
@@ -135,3 +140,16 @@ span.MuiTabs-indicator {
     border: none !important;
 }
 
+.left-table-body-content tr.active{
+    background: #cccccc38 !important;
+}
+.left-table-body-content{margin-top: 20px;}
+
+.buttons-block button {
+    /* white-space: nowrap; */
+    text-transform: none;
+}
+
+button.activeTabCls {
+    background: #676767 !important;
+}

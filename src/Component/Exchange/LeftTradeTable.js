@@ -87,12 +87,13 @@ const useStyles = makeStyles({
 var ws = new WebSocket("wss://stream.binance.com:9443/ws");
 
 // sx={{ minWidth: 650 }} 
-export default function LeftTradeTable({ pairsSelected }) {
+export default function LeftTradeTable({ pairsSelected, fullPairs }) {
   const asse = useRef()
   const [apiarray, setApiarray] = useState([]);
   const [seconddata, setSeconddata] = useState([]);
   const [butt, setButt] = useState('all')
   const [buttons, setButtons] = useState([{ name: 'All', id: 'all' }])
+  const [chains, setChains] = useState([])
 
   // var arr__params = []
 
@@ -208,6 +209,15 @@ export default function LeftTradeTable({ pairsSelected }) {
 
   // }
 
+  const fullPairSelecteds = async (rows) => {
+    for (let i = 0; i < chains.length; i++) {
+      const element = chains[i];
+      if (element._id === rows?.id) {
+        fullPairs(element)
+      }
+
+    }
+  }
 
   const networks = async () => {
     try {
@@ -216,6 +226,7 @@ export default function LeftTradeTable({ pairsSelected }) {
         // buttons.push({ name: data?.result[i]?.name })
         setButtons((pre) => [...pre, { name: data?.result[i]?.name, id: data?.result[i]?._id }])
       }
+      setChains(data?.result)
     } catch (error) {
       console.log(error)
     }
@@ -227,16 +238,29 @@ export default function LeftTradeTable({ pairsSelected }) {
 
   const getpairs = async () => {
     try {
+      setApiarray([])
       const { data } = await Axios.post(`/admin/getPairs`, { id: butt })
       setApiarray(data?.result)
     } catch (error) {
       console.log(error, "error")
     }
+
   }
 
+  const getpairOf = async () => {
+    try {
+      const { data } = await Axios.post(`/admin/getPairs`, { id: butt })
+      setApiarray(data?.result)
+      navigate(`/exchange/${data?.result[0]?.pair_symbol}`)
+    } catch (error) {
+      console.log(error, "error")
+    }
+  }
   useEffect(() => {
     networks()
+    getpairOf()
   }, [])
+
 
   useEffect(() => {
     if (butt) {
@@ -244,15 +268,23 @@ export default function LeftTradeTable({ pairsSelected }) {
     }
   }, [butt])
 
+  const [active, setActive] = useState("");
+  const [activeTab, setActiveTab] = useState("");
+
+  // const handleClick = (event) => {
+  //   setActive(event.target.id);
+
+  // }
+
 
   return (
-    <TableContainer component={Paper} className={classes.tabletrade}>
+    <TableContainer id="left-side-part-table" component={Paper} className={classes.tabletrade}>
       <Table size="small" aria-label="a dense table">
         <TableHead>
           <TableRow>
             <TableCell>Market</TableCell>
             <TableCell align="right" className={classes.colorchange}>
-              <div className='search-left-top'><SearchIcon style={{ color: 'rgba(255, 255, 255, 0.58)' }} /></div>
+              {/* <div className='search-left-top'><SearchIcon style={{ color: 'rgba(255, 255, 255, 0.58)' }} /></div> */}
             </TableCell>
           </TableRow>
         </TableHead>
@@ -260,17 +292,19 @@ export default function LeftTradeTable({ pairsSelected }) {
       <div className='buttons-block'>
         <Stack spacing={2} direction="row">
           {buttons?.map((rownw, index) => (
-            <Button variant="outlined" value={rownw.name} onClick={() => { assets(rownw) }} key={index}>{rownw.name}</Button>
+            <Button className={`${activeTab == index && 'activeTabCls'}`} variant="outlined" value={rownw.name} onClick={() => { assets(rownw); fullPairSelecteds(rownw); setActiveTab(index) }} key={index}>{rownw.name}</Button>
           ))}
 
         </Stack>
       </div>
-      <Table size="small" aria-label="a dense table">
+      <Table className='left-table-body-content' size="small" aria-label="a dense table">
         <TableBody className='table-body-range'>
           {apiarray?.map((row) => (
             <TableRow
               key={row.symbol1}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+              onClick={() => setActive(row)}
+              className={`list-group-item ${active == row && 'active'}`}
             >
               <TableCell component="td" scope="row" onClick={() => {
                 navigate(`/exchange/${row.pair_symbol}`)
@@ -285,7 +319,6 @@ export default function LeftTradeTable({ pairsSelected }) {
                 <div class="market-right">
                   {/* <div class="market-right-inner"><label style={{ color: `${row.per >= 0 ? '#23d886' : '#ca492f'} ` }}>{parseFloat(row.per).toFixed(2)}%</label><span>{row.price}</span></div> */}
                   <div class="market-right-inner"><span>{row.symbol1}</span></div>
-
                 </div>
               </TableCell>
 

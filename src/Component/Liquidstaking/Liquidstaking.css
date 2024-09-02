@@ -132,8 +132,9 @@
 
 div#demo-simple-select {
     padding-left: 25px;
-    padding-top: 12px;
+    /* padding-top: 12px; */
     font-weight: 700;
+    color: #fff;
 }
 
 .token-deposit-amount {
@@ -324,11 +325,11 @@ div#liquid-staking-id {
     border: 1px solid #383241;
 }
 
-.live.liquid-staking-table .table-contain td{
+.live.liquid-staking-table .table-contain td {
     border-bottom: 2px solid #524b63;
 }
 
-.live.liquid-staking-table .table-contain tbody:last-child td{
+.live.liquid-staking-table .table-contain tbody:last-child td {
     border-bottom: none;
 }
 
@@ -337,19 +338,157 @@ div#liquid-staking-id {
     font-size: 16px;
     margin-top: 5px;
 }
+
 .swaping-page.liquid-staking-main-body {
     height: auto;
 }
 
+.sortby.first {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
 
-@media (max-width:991.98px){
+
+.sortby.first div#demo-simple-select {
+    color: #fff;
+    padding-top: 7px;
+}
+.liquid-staking svg {
+    fill: #787E87;
+}
+
+.swaping-page.liquid-staking-main-body .table-head{
+    color: #787E87;
+    font-weight: 700;
+    font-size: 16px;
+}
+/* .swaping-page.liquid-staking-main-body .MuiPaper-root.MuiPaper-elevation{
+    background: #000 !important;
+} */
+.swaping-page.liquid-staking-main-body  input.MuiInputBase-input::placeholder {
+    color: #ffff;
+}
+.swaping-page.liquid-staking-main-body  input.MuiInputBase-input{
+    color: #fff;
+}
+.modal-box-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    background-color: #373C3E;
+    padding: 20px;
+    border-radius: 10px;
+    /* overflow-y: scroll;
+    height: 70vh; */
+}
+ .accordion-tab-head.staking-table{
+    background: #373C3E!important;
+    box-shadow: none !important;
+}
+.swaping-page.liquid-staking-main-body .titlename h4 {
+    color: #fff;
+}
+.usdt-fifty-td h4 {
+    color: #fff;
+    white-space: nowrap;
+    margin: 0;
+}
+.accordion-tab-head td.MuiTableCell-root{
+    border-bottom: none !important;
+}
+.live.liquid-staking-table button {
+    background: #1fc7d4;
+    color: #fff;
+}
+.usdt-fifty-td .doller-value button{
+    white-space: nowrap;
+    padding: 0;
+}
+.close-menu svg {
+    fill: #fff;
+    background: gray;
+    border-radius: 50px;
+    padding: 3px;
+}
+
+.close-menu {
+    text-align: end;
+}
+.modal-box-popup .usdt-fifty-td .doller-value {
+    color: #bcbcbc;
+}
+.modal-box-popup .MuiTableContainer-root {
+    background: none !important;
+    box-shadow: none !important;
+}
+
+div#liquid-staking-id .liquid-stake {
+    border-radius: 24px;
+}
+
+.dals-back {
+    text-align: left;
+    padding: 15px 10px 0;
+}
+
+.dals-back svg {
+    background: #53d6ff;
+    color: #fff !important;
+    fill: #fff;
+    border-radius: 50%;
+}
+
+.liquid-staking-classname > .MuiPaper-root, .liquid-staking-classname > .MuiPaper-root .liquid-staking {
+    height: 100%;
+}
+
+.liquid-staking-classname > .MuiPaper-root .liquid-staking {
+    display: flex;
+    align-items: center;
+}
+
+div#deposit-amount-liquid-staking {
+    width: 100%;
+    height: auto !important;
+}
+
+@media (max-width:991.98px) {
 
     .live.liquid-staking-table tbody.accordion-tab-head {
         flex-wrap: nowrap !important;
         overflow: auto !important;
     }
-    
-    .live.liquid-staking-table tbody.accordion-tab-head td:nth-last-child(2), .live.liquid-staking-table tbody.accordion-tab-head td:nth-last-child(3), .live.liquid-staking-table tbody.accordion-tab-head td:nth-last-child(4), .live.liquid-staking-table tbody.accordion-tab-head td:nth-last-child(5){display:block !important}
 
+    .live.liquid-staking-table tbody.accordion-tab-head td:nth-last-child(2),
+    .live.liquid-staking-table tbody.accordion-tab-head td:nth-last-child(3),
+    .live.liquid-staking-table tbody.accordion-tab-head td:nth-last-child(4),
+    .live.liquid-staking-table tbody.accordion-tab-head td:nth-last-child(5) {
+        display: block !important
+    }
 
+    .modal-box-popup{
+        width: 65%;
+    }
+    .modal-box-popup tbody.accordion-tab-head td:nth-last-child(2),.modal-box-popup tbody.accordion-tab-head td:nth-last-child(3), .modal-box-popup tbody.accordion-tab-head td:nth-last-child(4),.modal-box-popup tbody.accordion-tab-head td:nth-last-child(5){
+        display: block !important;
+        width:auto;
+    }
+    .modal-box-popup tbody.accordion-tab-head{
+        flex-wrap: nowrap !important;
+    }
+}
+
+.titlename {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.swaping-page.liquid-staking-main-body .liquid-staking {
+    max-width: 1051px;
+    margin: 0 auto;
 }

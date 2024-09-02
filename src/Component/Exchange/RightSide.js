@@ -72,18 +72,22 @@ const useStyles = makeStyles({
 
 });
 
-const RightSide = ({ pairs, trades }) => {
+const RightSide = ({ pairs, trades, fullpairs, loading }) => {
   const [da, setda] = useState()
   const trade = (status) => {
     setda(status)
     trades(status)
   }
 
+  const loadings = (data) => {
+    loading(data)
+  }
+
   const classes = useStyles();
 
   return (
     <>
-      <div className={classes.mtt}><RightTradeTabOuter pairs={pairs} trade={trade} /></div>
+      <div className={classes.mtt}><RightTradeTabOuter pairs={pairs} trade={trade} fullpairs={fullpairs} loadings={loadings} /></div>
       <div className={classes.mtb}><TradeHistory da={da} /></div>
     </>
   )

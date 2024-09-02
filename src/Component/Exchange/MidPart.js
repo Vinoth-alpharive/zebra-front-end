@@ -3,10 +3,10 @@ import './MidPart.css'
 import ChartOuter from './ChartOuter'
 import OrderOuter from './OrderOuter'
 
-const MidPart = ({ tr }) => {
+const MidPart = ({ tr, pairs }) => {
   return (
     <div>
-      <ChartOuter />
+      <ChartOuter pairs={pairs} tr={tr} />
       <OrderOuter tr={tr} />
     </div>
   )

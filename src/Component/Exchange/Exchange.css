@@ -13,6 +13,10 @@
     padding: 0 20px 15px;
 }
 
+table.left-table-body-content tbody tr:hover {
+    background: #cccccc38;
+}
+
 @media (max-width:991.98px){
 
     .trade-history-block.order-open-book.order-open-book-mobile {

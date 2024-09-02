@@ -1,0 +1,69 @@
+.general-info {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+.general-info-green-head p {
+    background: #469985;
+    text-align: left;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+    color: #fff;
+    font-size: 18px;
+}
+
+.info-field input{
+    width: 400px !important;
+    padding: 25px 0 5px;
+}
+.info-field p{
+    margin-bottom: 0;
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+}
+.general-info-box {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 19px;
+    border-radius:10px;
+    margin-bottom: 15px;
+    border: 1px solid #cdcd;
+}
+.info-field {
+    padding: 0px 16px 40px;
+}
+
+.general-info-box:first-child{
+    border-radius: 0 0 10px 10px;
+    border: none !important;
+}
+.info-field.additional-field {
+    padding: 10px 16px 40px;
+}
+.checkbox-tick {
+    color: #000;
+}
+
+.info-field p span {
+    color: #dd2529;
+    font-size: 16px;
+    margin-left: 4px;
+}
+
+.nxt-btn {
+    margin-top: 20px;
+}
+
+.nxt-btn a.Start-Application-btn {
+    padding: 10px 21px;
+}
+
+.info-field input:root{
+    --ck-table-selected-cell-background:none !important;
+}
+
+@media(max-width:767.98px){
+    .info-field input{
+        width: auto !important;
+    }
+}
+

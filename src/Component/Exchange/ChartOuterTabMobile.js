@@ -160,7 +160,7 @@ const useStyles = makeStyles({
 
 
 
-const ChartOuterTabMobile = () => {
+const ChartOuterTabMobile = ({ pairs, tr }) => {
 
   const [value, setValue] = React.useState(0);
   const [anchordot, setAnchorDot] = React.useState(null);
@@ -244,7 +244,7 @@ const ChartOuterTabMobile = () => {
 
 
         <TabPanel value={value} index={0} className={classes.tabpanelcls}>
-          <TradingViewPrice />
+          <TradingViewPrice pairs={pairs} />
         </TabPanel>
 
         <TabPanel value={value} index={1} className={classes.tabpanelcls}>
@@ -257,7 +257,7 @@ const ChartOuterTabMobile = () => {
         </TabPanel>
 
         <TabPanel value={value} index={3} className={classes.tabpanelcls}>
-          <TradeHistoryMobile />
+          <TradeHistoryMobile tr={tr} />
         </TabPanel>
 
         <TabPanel value={value} index={4} className={classes.tabpanelcls}>
@@ -277,7 +277,7 @@ const ChartOuterTabMobile = () => {
       </TabPanel> */}
 
       </Box>
-      <OrderBookTableMobile />
+      <OrderBookTableMobile tr={tr} />
     </>
   )
 }

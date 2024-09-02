@@ -2,11 +2,11 @@ import React from 'react'
 import ChartOuterTab from './ChartOuterTab'
 import ChartOuterTabMobile from './ChartOuterTabMobile'
 
-const ChartOuter = () => {
+const ChartOuter = ({ pairs, tr }) => {
   return (
     <div>
-      <ChartOuterTab/>
-      <ChartOuterTabMobile/>
+      <ChartOuterTab pairs={pairs} />
+      <ChartOuterTabMobile pairs={pairs} tr={tr} />
     </div>
   )
 }

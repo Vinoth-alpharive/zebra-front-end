@@ -3,13 +3,19 @@
     margin: 0 auto;
     /* height: 56vh; */
 }
+.search-box{
+    display: flex;
+    justify-content: center;
+}
 .fliter-left {
     display: flex;
     text-align: start;
     -webkit-box-pack: start;
     justify-content: flex-start;
 }
-.fliter-inner h4.textSubtle, .filter-right .textSubtle{
+
+.fliter-inner h4.textSubtle,
+.filter-right .textSubtle {
     color: #fff;
     font-weight: 600;
     line-height: 1.5;
@@ -20,13 +26,17 @@
     margin-top: 0;
     margin-bottom: 0;
 }
+
 .fliter-inner .tab-content p.MuiTypography-body1 {
     color: #fff;
 }
-.tab-content .MuiBox-root, .tab-content .MuiTabs-scroller {
+
+.tab-content .MuiBox-root,
+.tab-content .MuiTabs-scroller {
     padding: 0 !important;
     text-align: start;
 }
+
 .farmimg-page .MuiTabs-flexContainer {
     width: max-content;
     background-color: #fff;
@@ -34,6 +44,7 @@
     display: inline-flex;
     border: 1px solid #000;
 }
+
 .fliter-inner .MuiTabs-flexContainer button {
     color: rgb(0, 0, 0);
     font-size: 14px;
@@ -42,24 +53,28 @@
     margin: 1px;
     font-weight: 500;
 }
+
 .fliter-inner .MuiTabs-flexContainer .Mui-selected {
     color: #ffffff !important;
     background: #373C3E;
     border-radius: 30px;
 }
+
 .fliter-inner .MuiTabs-flexContainer {
     margin: 3px 0;
     border-radius: 30px;
 }
-.staked-switch label{
+
+.staked-switch label {
     color: #fff;
     margin-left: 0;
 }
-.staked-switch label .MuiSwitch-track{
+
+.staked-switch label .MuiSwitch-track {
     align-items: center;
     background-color: #eeeaf4;
     border-radius: 24px;
-    box-shadow: inset 0px 2px 2px -1px rgba(74,74,104,.1);
+    box-shadow: inset 0px 2px 2px -1px rgba(74, 74, 104, .1);
     cursor: pointer;
     display: inline-flex;
     height: 22px;
@@ -68,6 +83,7 @@
     width: 36px;
     top: 1px;
 }
+
 .staked-switch .MuiSwitch-switchBase {
     background-color: #fff;
     border-radius: 50%;
@@ -81,9 +97,11 @@
     z-index: 1;
     color: #373c3e;
 }
-.staked-switch .MuiSwitch-switchBase.Mui-checked+.MuiSwitch-track{
+
+.staked-switch .MuiSwitch-switchBase.Mui-checked+.MuiSwitch-track {
     background-color: #25c6a1 !important;
 }
+
 .staked-switch .MuiSwitch-root .MuiSwitch-thumb {
     box-sizing: border-box;
     width: 22px;
@@ -91,7 +109,9 @@
     color: #373c3e;
     margin-top: 2px;
 }
-fieldset.MuiOutlinedInput-notchedOutline, fieldset.MuiOutlinedInput-notchedOutline:hover{
+
+fieldset.MuiOutlinedInput-notchedOutline,
+fieldset.MuiOutlinedInput-notchedOutline:hover {
     height: 40px;
     display: flex;
     -webkit-box-align: center;
@@ -99,7 +119,7 @@ fieldset.MuiOutlinedInput-notchedOutline, fieldset.MuiOutlinedInput-notchedOutli
     -webkit-box-pack: justify;
     justify-content: space-between;
     padding: 0px 16px;
-    box-shadow: inset 0px 2px 2px -1px rgba(255, 255, 255, 0.1) ;
+    box-shadow: inset 0px 2px 2px -1px rgba(255, 255, 255, 0.1);
     border: 1px solid #eeeaf4 !important;
     border-radius: 16px;
 }
@@ -154,15 +174,18 @@ fieldset.MuiOutlinedInput-notchedOutline, fieldset.MuiOutlinedInput-notchedOutli
 
 .title-img2 {
     position: absolute;
-    top: 0px;
-    left: 13px;
+    top: 40px;
+    left: 22px;
 }
+
 .title-img2 img {
     width: 55%;
 }
+
 .live .MuiTableCell-body {
     padding: 28px 15px 28px 15px;
 }
+
 .usdt-sec-td {
     display: flex;
     min-width: 140px;
@@ -198,6 +221,7 @@ fieldset.MuiOutlinedInput-notchedOutline, fieldset.MuiOutlinedInput-notchedOutli
     background: none;
     border: 2px solid #31d0aa;
 }
+
 .live .rocket svg {
     align-self: center;
     fill: #31d0aa;
@@ -211,10 +235,12 @@ fieldset.MuiOutlinedInput-notchedOutline, fieldset.MuiOutlinedInput-notchedOutli
     text-align: left;
     margin: 0;
 }
+
 .usdt-third-td .earn-txt {
     color: #bdc2c4;
     font-size: 14px;
 }
+
 .usdt-fourth-td .apr-value {
     display: flex;
     gap: 5px;
@@ -224,6 +250,7 @@ fieldset.MuiOutlinedInput-notchedOutline, fieldset.MuiOutlinedInput-notchedOutli
     display: flex;
     gap: 5px;
 }
+
 .usdt-fourth-td .per-increase {
     color: #31d0aa;
     font-weight: 600;
@@ -232,6 +259,7 @@ fieldset.MuiOutlinedInput-notchedOutline, fieldset.MuiOutlinedInput-notchedOutli
     font-size: 14px;
     display: inline-block;
 }
+
 .usdt-fourth-td .per-increase span {
     color: #31d0aa;
     font-weight: 600;
@@ -246,6 +274,7 @@ fieldset.MuiOutlinedInput-notchedOutline, fieldset.MuiOutlinedInput-notchedOutli
     text-underline-offset: 0.1em;
     margin-left: 3px;
 }
+
 .usdt-fourth-td .per-decrease {
     color: #18222f;
     font-weight: 400;
@@ -253,13 +282,15 @@ fieldset.MuiOutlinedInput-notchedOutline, fieldset.MuiOutlinedInput-notchedOutli
     font-size: 14px;
     text-decoration: line-through;
 }
+
 .usdt-fifty-td .doller-value {
     color: #280d5f;
     font-weight: 400;
     line-height: 1.5;
     font-size: 14px;
 }
-.live .table-contain{
+
+.live .table-contain {
     width: 100%;
     background: #fff;
     border-radius: 32px;
@@ -267,6 +298,7 @@ fieldset.MuiOutlinedInput-notchedOutline, fieldset.MuiOutlinedInput-notchedOutli
     border: 1px solid #e7e3eb;
     cursor: pointer;
 }
+
 .farm-type button {
     position: relative;
     border: 0px;
@@ -285,7 +317,8 @@ fieldset.MuiOutlinedInput-notchedOutline, fieldset.MuiOutlinedInput-notchedOutli
     color: #18222f;
     box-shadow: none;
 }
-.farm-type button:hover{
+
+.farm-type button:hover {
     opacity: 0.65;
     background-color: #fff !important;
     color: #18222f;
@@ -316,45 +349,65 @@ fieldset.MuiOutlinedInput-notchedOutline, fieldset.MuiOutlinedInput-notchedOutli
 .menuss ul li {
     padding: 10px 11px;
 }
-.V3-Farms .staked-switch, .V3-Farms .staked-switch label{
+
+.V3-Farms .staked-switch,
+.V3-Farms .staked-switch label {
     margin-top: 0;
     margin-right: 0;
 }
+
 li.menu-lists-title {
     background: #f6f6f6;
 }
+
 .input-field div {
     padding: 8px 8px;
     text-align: start;
 }
-.fliter-titles{
+
+.fliter-titles {
     align-items: center;
 }
-.demo-input-label{
+
+.demo-input-label {
     color: #fff !important;
 }
-.sortby label, .search-bar label{
+
+.sortby label,
+.search-bar label {
     color: #fff !important;
     position: absolute;
     left: 0;
     top: -9px;
 }
-.search-bar input{
-    padding: 8px 8px;
+
+.search-bar input {
+    padding: 6px 8px;
     text-align: start;
     color: #fff;
 }
-.search-bar{
+
+.search-bar {
     margin-left: 20px;
 }
-.sortby svg{
+
+.sortby svg {
     color: #fff;
 }
 
-.accordion-tab-div button{margin: 0px !important;text-transform: none !important;padding:0px !important;font-size: 16px; font-weight: 700;color: #1fc7d4;}
+.accordion-tab-div button {
+    margin: 0px !important;
+    text-transform: none !important;
+    padding: 0px !important;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1fc7d4;
+}
+
 .accordion-tab-div .w-60-percent button:hover {
     background-color: #1fc7d4;
 }
+
 button.connect-wallet-start-farming {
     border: 0px;
     border-radius: 16px;
@@ -387,6 +440,7 @@ label.start-farming {
     margin-bottom: 10px;
     display: block;
 }
+
 .add-liquidity .MuiPaper-root.MuiPaper-elevation {
     border-bottom: 1px solid #e7e3eb;
     display: flex;
@@ -397,6 +451,7 @@ label.start-farming {
     margin: 0 !important;
     background: #ffffff;
 }
+
 .add-liquidity .per-increase span {
     color: #1fc7d4;
     font-weight: 600;
@@ -411,6 +466,7 @@ label.start-farming {
     text-underline-offset: 0.1em;
     margin-left: 3px;
 }
+
 .liquidit-title {
     -webkit-box-align: center;
     align-items: center;
@@ -427,19 +483,21 @@ label.start-farming {
     font-weight: 600;
     line-height: 1.1;
 }
-.liquidit-title .per-increase{
+
+.liquidit-title .per-increase {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.close-icon svg{
+.close-icon svg {
     fill: #1fc7d4;
     color: #1fc7d4;
     font-size: 22px;
     cursor: pointer;
 }
-.setting-icon svg{
+
+.setting-icon svg {
     font-size: 22px;
     cursor: pointer;
 }
@@ -518,7 +576,8 @@ label.View-prices-in {
     display: inline-block;
 }
 
-.pair-block-change-left, .pair-block-change-right {
+.pair-block-change-left,
+.pair-block-change-right {
     margin-bottom: 20px;
 }
 
@@ -552,7 +611,8 @@ label.View-prices-in {
     display: inline-block;
 }
 
-.pair-block-change-left, .pair-block-change-right {
+.pair-block-change-left,
+.pair-block-change-right {
     margin-bottom: 20px;
 }
 
@@ -615,7 +675,8 @@ label.View-prices-in {
     display: inline-block;
 }
 
-.pair-block-change-left, .pair-block-change-right {
+.pair-block-change-left,
+.pair-block-change-right {
     margin-bottom: 20px;
 }
 
@@ -697,7 +758,8 @@ div#liquidity-block-left {
     display: inline-block;
 }
 
-.pair-block-change-left, .pair-block-change-right {
+.pair-block-change-left,
+.pair-block-change-right {
     margin-bottom: 20px;
 }
 
@@ -769,13 +831,16 @@ div#liquidity-block-left {
     width: 74%;
 }
 
-.min-max-price-block input:focus{outline: none;}
+.min-max-price-block input:focus {
+    outline: none;
+}
 
 .liquidity-inner-blocks-right {
     margin-top: 10px !important;
 }
 
-.current-price-block label, .current-price-block span {
+.current-price-block label,
+.current-price-block span {
     font-size: 12px;
     color: #000;
     font-weight: 700;
@@ -792,12 +857,14 @@ div#liquidity-block-left {
     align-items: center;
 }
 
-.incr-icon, .decr-icon {
+.incr-icon,
+.decr-icon {
     display: flex;
     align-items: center;
 }
 
-.incr-icon svg, .decr-icon svg {
+.incr-icon svg,
+.decr-icon svg {
     color: #40cfda;
 }
 
@@ -863,19 +930,19 @@ button.balance-btn-submit {
     border: none;
     color: #fff;
     background: #212424;
-border-radius: 200px;
-width: 150px;
-  }
-  
-  .chain-select-options .dropdown-input {
+    border-radius: 200px;
+    width: 150px;
+}
+
+.chain-select-options .dropdown-input {
     padding: 16px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     user-select: none;
-  }
+}
 
-  .chain-select-options .dropdown-menu {
+.chain-select-options .dropdown-menu {
     position: absolute;
     transform: translateY(4px);
     width: 100%;
@@ -895,852 +962,881 @@ width: 150px;
     background: #212424;
     border: none;
 }
-    
-    .chain-select-options .dropdown-item{
-    padding:5px;
-    cursor:pointer;
-    }
-    
-    .chain-select-options .dropdown-item:hover{
-        background: #010707;
-        border-radius: 16px;
-    }
 
-    .chain-select-options.dropdown-container .dropdown-item {
-        color: #fff;
-        display: flex;
-        padding: 0px;
-    }
+.chain-select-options .dropdown-item {
+    padding: 5px;
+    cursor: pointer;
+}
 
-    .chain-select-options.dropdown-container .dropdown-item div {
-        margin-right: 12px;
-    }
-    
-    .chain-select-options.dropdown-container .dropdown-input {
-        background: #212424;
-        border-radius: 200px;
-        border: none;
-    }
+.chain-select-options .dropdown-item:hover {
+    background: #010707;
+    border-radius: 16px;
+}
 
-    .chain-select-options.dropdown-container .dropdown-tool svg {
-        color: #fff;
-        fill: #fff;
-    }
+.chain-select-options.dropdown-container .dropdown-item {
+    color: #fff;
+    display: flex;
+    padding: 0px;
+}
+
+.chain-select-options.dropdown-container .dropdown-item div {
+    margin-right: 12px;
+}
+
+.chain-select-options.dropdown-container .dropdown-input {
+    background: #212424;
+    border-radius: 200px;
+    border: none;
+}
+
+.chain-select-options.dropdown-container .dropdown-tool svg {
+    color: #fff;
+    fill: #fff;
+}
 
 
-    .chain-select-options .dropdown-menu-inner::-webkit-scrollbar {
-        width: 5px;
-        height: 150px;
-      }
+.chain-select-options .dropdown-menu-inner::-webkit-scrollbar {
+    width: 5px;
+    height: 150px;
+}
 
-      .dropdown-menu-inner {
-        overflow: auto;
-        height: 100%;
-        max-height: 280px;
-    }
-      
-      /* Track */
-      .chain-select-options .dropdown-menu-inner::-webkit-scrollbar-track {
-        background: #d7d7d7; 
-      }
-       
-      /* Handle */
-      .chain-select-options .dropdown-menu-inner::-webkit-scrollbar-thumb {
-        background: #888; 
-      }
-      
-      /* Handle on hover */
-      .chain-select-options .dropdown-menu-inner::-webkit-scrollbar-thumb:hover {
-        background: #555; 
-      }
+.dropdown-menu-inner {
+    overflow: auto;
+    height: 100%;
+    max-height: 280px;
+}
 
-      .chain-select-options.chain-select-options-buy.select-token.dropdown-container .dropdown-input {
-        padding: 8px 10px;
-    }
-    
-    .chain-select-options.chain-select-options-buy.select-token.dropdown-container .dropdown-selected-value {
-        font-weight: 500;
-        font-size: 16px;
-        color: #FFFFFF;
-        opacity: 1;
-    }
+/* Track */
+.chain-select-options .dropdown-menu-inner::-webkit-scrollbar-track {
+    background: #d7d7d7;
+}
 
-    .chain-select-options.chain-select-options-buy.select-token.dropdown-container .dropdown-item img {
-        width: 20px;
-    }
-    
-    .chain-select-options.chain-select-options-buy.select-token.dropdown-container .dropdown-item div {
-        display: flex;
-        align-items: center;
-    }
-    
-    .pairing-block {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin: 15px 0;
-    }
+/* Handle */
+.chain-select-options .dropdown-menu-inner::-webkit-scrollbar-thumb {
+    background: #888;
+}
 
-    .chain-select-options .dropdown-tool {
-        margin-left: 0;
-        display: flex;
-        align-items: center;
-        position: relative;
-    }
+/* Handle on hover */
+.chain-select-options .dropdown-menu-inner::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
 
-    .chain-select-options .dropdown-menu-inner img{width: 20px;}
-    
-    .chain-select-options .dropdown-tool svg {
-        fill: #a3a6a6 !important;
-    }
+.chain-select-options.chain-select-options-buy.select-token.dropdown-container .dropdown-input {
+    padding: 8px 10px;
+}
 
-    .chain-select-options.chain-select-options-sell.select-token.dropdown-container .dropdown-menu, .chain-select-options.chain-select-options-buy.select-token.dropdown-container .dropdown-menu {
-        top: 48px;
-        width: 285px;
+.chain-select-options.chain-select-options-buy.select-token.dropdown-container .dropdown-selected-value {
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.chain-select-options.chain-select-options-buy.select-token.dropdown-container .dropdown-item img {
+    width: 20px;
+}
+
+.chain-select-options.chain-select-options-buy.select-token.dropdown-container .dropdown-item div {
+    display: flex;
+    align-items: center;
+}
+
+.pairing-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.chain-select-options .dropdown-tool {
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.chain-select-options .dropdown-menu-inner img {
+    width: 20px;
+}
+
+.chain-select-options .dropdown-tool svg {
+    fill: #a3a6a6 !important;
+}
+
+.chain-select-options.chain-select-options-sell.select-token.dropdown-container .dropdown-menu,
+.chain-select-options.chain-select-options-buy.select-token.dropdown-container .dropdown-menu {
+    top: 48px;
+    width: 285px;
     left: 0;
     right: 0;
-    }
+}
 
-    .chain-select-options.chain-select-options-buy.select-token.dropdown-container .search-box-token-search input {
-        background: #111414;
-        border-radius: 16px;
-        border: none;
-        padding: 10px;
-        font-weight: 500;
-        width: 95%;
-    }
-    
-    .chain-select-options.chain-select-options-buy.select-token.dropdown-container .search-box-token-search {
-        margin-bottom: 12px;
-    }
-    .chain-select-options.chain-select-options-buy.select-token.dropdown-container .dropdown-menu, .chain-select-options.chain-select-options-sell.select-token.dropdown-container .dropdown-menu {
-        max-height: 370px;
-    }
+.chain-select-options.chain-select-options-buy.select-token.dropdown-container .search-box-token-search input {
+    background: #111414;
+    border-radius: 16px;
+    border: none;
+    padding: 10px;
+    font-weight: 500;
+    width: 95%;
+}
+
+.chain-select-options.chain-select-options-buy.select-token.dropdown-container .search-box-token-search {
+    margin-bottom: 12px;
+}
+
+.chain-select-options.chain-select-options-buy.select-token.dropdown-container .dropdown-menu,
+.chain-select-options.chain-select-options-sell.select-token.dropdown-container .dropdown-menu {
+    max-height: 370px;
+}
 
 
-    .chain-select-options.chain-select-options-buy.select-token.dropdown-container .search-box-token-search {
-        position: relative;
-    }
-    
-    .chain-select-options.chain-select-options-buy.select-token.dropdown-container .search-box-token-search .seach-icon-inside {
-        position: absolute;
-        top: 5px;
-        left: 10px;
-    }
+.chain-select-options.chain-select-options-buy.select-token.dropdown-container .search-box-token-search {
+    position: relative;
+}
 
-    .chain-select-options.chain-select-options-buy.select-token.dropdown-container .search-box-token-search .seach-icon-inside img{
-        width: 15px;
-    }
+.chain-select-options.chain-select-options-buy.select-token.dropdown-container .search-box-token-search .seach-icon-inside {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
 
-    .chain-select-options.chain-select-options-buy.select-token.dropdown-container .dropdown-menu-inner .dropdown-item {
-        padding: 5px 0px;
-    }
+.chain-select-options.chain-select-options-buy.select-token.dropdown-container .search-box-token-search .seach-icon-inside img {
+    width: 15px;
+}
 
-    button.Add-V2-Liquidity {
-        color: #7a6eaa;
-        font-weight: 600;
-        line-height: 1.5;
-        font-size: 16px;
-        padding: 0px;
-        min-height: 48px;
-        text-align: center;
-        width: 100%;
-        margin-top: 20px;
-    }
-    
-    .free-tier-inner-left h3 {
-        margin: 0px;
-    }
-    
-    .free-tier-inner-left label {
-        font-size: 12px;
-        color: #7645d9;
-        font-weight: 700;
-        border: 2px solid #7645d9;
-        padding: 2px 10px;
-        border-radius: 15px;
-        margin-top: 5px;
-        display: inline-block;
-    }
-    
-    .free-tier-inner {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 20px;
-    }
-    
-    .free-tier {
-        padding: 8px;
-        border: 1px solid #e7e3eb;
-        background-color: #faf9fa;
-        border-radius: 16px;
-        margin-bottom: 15px;
-    }
-    
-    span.free-tier-inner-right {
-        font-weight: 700;
-        color: #2dcbd7;
-        cursor: pointer;
-    }
-    
-    .free-tier-bottom .MuiStack-root button {
-        padding: 2px 2px 4px;
-        border-radius: 16px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        color: #280d5f;
-        font-weight: 600;
-        line-height: 1.5;
-        text-align: center;
-        font-size: 16px;
-        cursor: pointer;
-        margin-left: 0px;
-        width: 25%;
-        border: 0px solid #e7e3eb;
-        background-color: #faf9fa;
-    }
-    
-    .free-tier-bottom .MuiStack-root button label {
-        color: #7645d9;
-        font-weight: 700;
-        border: 2px solid #7645d9;
-        padding: 2px 10px;
-        border-radius: 15px;
-        margin-top: 5px;
-        display: inline-block;
-        font-size: 10px;
-    }
-    
-    .free-tier-bottom .MuiStack-root {
-        gap: 10px;
-    }
+.chain-select-options.chain-select-options-buy.select-token.dropdown-container .dropdown-menu-inner .dropdown-item {
+    padding: 5px 0px;
+}
 
-    .free-tier.free-tier-v2lp .MuiStack-root button {
-        width: 50%;
-        overflow: hidden;
-    }
-    
-    .free-tier .MuiStack-root button.activepercentage {
-        background: linear-gradient(180deg,#53dee9,#7645d9);
-        border-radius: 16px;
-    }
-    /* button.activepercentage */
-    .free-tier-bottom .MuiStack-root button div{
-        padding: 8px !important;
-        border: 1px solid #e7e3eb;
-        background-color: #faf9fa;
-        border-radius: 16px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+button.Add-V2-Liquidity {
+    color: #7a6eaa;
+    font-weight: 600;
+    line-height: 1.5;
+    font-size: 16px;
+    padding: 0px;
+    min-height: 48px;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}
 
-    .free-tier.free-tier-v2lp .MuiStack-root button div {
-        width: 90%;
-    }
+.free-tier-inner-left h3 {
+    margin: 0px;
+}
 
-    h3.my-position-head {
-        margin: 0;
-        text-align: center;
-    }
+.free-tier-inner-left label {
+    font-size: 12px;
+    color: #7645d9;
+    font-weight: 700;
+    border: 2px solid #7645d9;
+    padding: 2px 10px;
+    border-radius: 15px;
+    margin-top: 5px;
+    display: inline-block;
+}
 
-    .vl2-lp-right {
-        opacity: 0.4;
-    }
+.free-tier-inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
 
-    .free-tier-bottom .MuiStack-root button div{border:none !important}
-    .free-tier-bottom .MuiStack-root button{border: 1px solid #e7e3eb !important;}
+.free-tier {
+    padding: 8px;
+    border: 1px solid #e7e3eb;
+    background-color: #faf9fa;
+    border-radius: 16px;
+    margin-bottom: 15px;
+}
 
-    .roi-calculator-modal .pair-block-change-left, .roi-calculator-modal .pair-block-change-right {
-        margin-bottom: 0px;
-    }
-    
-    .roi-calculator-modal .pair-block-change {
-        padding: 24px;
-        border: 1px solid #e7e3eb;
-        border-radius: 24px;
-        margin-bottom: 20px;
-    }
-    
-    .roi-calculator-modal .pair-block-change-right .token-two.bottom-token.token-style {
-        padding-bottom: 0px;
-    }
+span.free-tier-inner-right {
+    font-weight: 700;
+    color: #2dcbd7;
+    cursor: pointer;
+}
 
-    .roi-calculator-modal .history-price-tab > div > div {
-        width: 99%;
-        margin-left: 0px;
-        margin-right: 0px;
-        background-color: #eff4f5;
-        border-radius: 16px;
-        display: inline-flex;
-        border: 1px solid #e9eaeb;
-        justify-content: space-between;
-    }
+.free-tier-bottom .MuiStack-root button {
+    padding: 2px 2px 4px;
+    border-radius: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    color: #280d5f;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 0px;
+    width: 25%;
+    border: 0px solid #e7e3eb;
+    background-color: #faf9fa;
+}
 
-    
-    .roi-calculator-modal .history-price-tab-box {
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    
-    .roi-calculator-modal .history-price-tab > div > div button {
-        height: 32px;
-        border-radius: 16px !important;
-        font-size: 16px;
-        color: #2dcbd7;
-        width: 25%;
-    }
-    
-    .roi-calculator-modal .history-price-tab > div > div button.Mui-selected {
-        background: #2dcbd7;
-    }
+.free-tier-bottom .MuiStack-root button label {
+    color: #7645d9;
+    font-weight: 700;
+    border: 2px solid #7645d9;
+    padding: 2px 10px;
+    border-radius: 15px;
+    margin-top: 5px;
+    display: inline-block;
+    font-size: 10px;
+}
 
-    .roi-calculator-modal .history-price-tab-box > div {
-        border: none;
-    }
+.free-tier-bottom .MuiStack-root {
+    gap: 10px;
+}
 
-    .roi-calculator-modal div#liquidity-block-left .MuiFormControl-root fieldset {
-        border: 1px solid #d7caec;
-        border-radius: 16px;
-        box-shadow: inset 0px 2px 2px -1px rgba(74,74,104,.1);
-        height: 60px !important;
-        width: 100%;
-    }
-    
-    .roi-calculator-modal div#liquidity-block-left .MuiFormControl-root {
-        margin-left: 0px;
-        width: 91%;
-    }
+.free-tier.free-tier-v2lp .MuiStack-root button {
+    width: 50%;
+    overflow: hidden;
+}
 
-    .roi-calculator-modal .dolar-range-deposit-amnt {
-        justify-content: space-between;
-    }
-    
-    .roi-calculator-modal .dolar-range-deposit-amnt button {
-        color: #2dcbd7 !important;
-        height: 20px;
-        font-size: 12px;
-        width: 30%;
-        border-radius: 16px;
-        background: #eff4f5;
-        border: none;
-        font-weight: 700;
-    }
-    
-    .roi-calculator-modal .dolar-range-deposit-amnt button.active-cls, .roi-calculator-modal .dolar-range-deposit-amnt button:hover {
-        color: #fff !important;
-        background: #2dcbd7 !important;
-    }
+.free-tier .MuiStack-root button.activepercentage {
+    background: linear-gradient(180deg, #53dee9, #7645d9);
+    border-radius: 16px;
+}
 
-    .roi-calculator-modal .dolar-range-deposit-amnt {
-        justify-content: space-between;
-    }
-    
-    .roi-calculator-modal .dolar-range-deposit-amnt button {
-        color: #2dcbd7 !important;
-        height: 20px;
-        font-size: 12px;
-        width: 30%;
-        border-radius: 16px;
-        background: #eff4f5;
-        border: none;
-        font-weight: 700;
-    }
-    
-    
-    .roi-calculator-modal button.full-range-button {
-        height: 32px;
-        color: #2dcbd7 !important;
-        font-weight: 600;
-        text-transform: none;
-        width: 100%;
-        margin-top: 16px;
-        border-radius: 16px;
-        border-color: #2dcbd7 !important;
-        border-width: 2px;
-    }
+/* button.activepercentage */
+.free-tier-bottom .MuiStack-root button div {
+    padding: 8px !important;
+    border: 1px solid #e7e3eb;
+    background-color: #faf9fa;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-    .roi-calculator-modal .liquidit-content {
-        max-height: 500px;
-        overflow: auto;
-        height: 500px;
-    }
-    
-    .roi-calculator-modal h3.price-percentage-block-part {
-        font-size: 24px;
-        color: #280d5f;
-        font-weight: 600;
-        margin: 5px 0px 0px;
-    }
-    
-    .roi-calculator-modal h3.price-percentage-block-part span {
-        color: #000;
-    }
+.free-tier.free-tier-v2lp .MuiStack-root button div {
+    width: 90%;
+}
 
-    .token-pair.cake-button.set-price-roi-calc {
-        text-align: right;
-    }
+h3.my-position-head {
+    margin: 0;
+    text-align: center;
+}
 
-    .your-position-appear-here {
-        color: #280d5f;
-        font-weight: 600;
-        line-height: 1.5;
-        padding-top: 4px;
-        text-align: center;
-        font-size: 20px;
-        padding: 50px 0;
-        margin-bottom: 20px;
-    }
-    .roi-price-tabs-stack-for button {
-        width: 20% !important;
-    }
+.vl2-lp-right {
+    opacity: 0.4;
+}
 
-    .roi-calculator-modal .roi-at-current-rate {
-        padding: 24px;
-        border-radius: 16px;
-        background: linear-gradient(139.73deg,#e5fdff,#f3efff);
-        margin-top: 30px;
-    }
-    
-    h3.price-percentage-block-part {
-        font-size: 24px;
-        color: #280d5f;
-        font-weight: 600;
-        margin: 5px 0px;
-    }
-    
-    
-    .roi-at-apply-setting button {
-        width: 100%;
-        background: #2dcbd7;
-        text-transform: capitalize;
-        font-weight: 700;
-        font-size: 16px;
-        border-radius: 16px;
-    }
-    
-    .roi-at-apply-setting {
-        margin-top: 20px;
-    }
-    
-    .roi-at-calcullate-impermanent-loss {
-        background: #faf9fa;
-        padding: 12px;
-        border-radius: 20px;
-        margin-top: 20px;
-    }
+.free-tier-bottom .MuiStack-root button div {
+    border: none !important
+}
 
-    .edit-reset-font button {
-        font-size: 12px;
-        height: 20px;
-        line-height: 30px;
-    }
-    
-    .ABV-table {
-        padding: 0px !important;
-        margin-top: 10px !important;
-    }
-    
-    .token-pair.cake-button.edit-reset-outer {
-        margin-bottom: 10px;
-    }
-    
-    .ABV-table th {
-        color: #7645d9;
-        font-weight: 700;
-        line-height: 1.5;
-        text-transform: uppercase;
-        margin: 0px;
-        font-size: 12px;
-        padding: 15px;
-    }
+.free-tier-bottom .MuiStack-root button {
+    border: 1px solid #e7e3eb !important;
+}
 
-    .asset-mg-block-outer {
-        color: #280d5f;
-        font-weight: 400;
-        line-height: 1.5;
-        margin-left: 4px;
-        font-size: 16px;
-        display: flex;
-        gap: 5px;
-    }
-    
-    .asset-mg-block {
-        width: 25px;
-    }
-    
-    .asset-mg-block img {
-        width: 100%;
-    }
+.roi-calculator-modal .pair-block-change-left,
+.roi-calculator-modal .pair-block-change-right {
+    margin-bottom: 0px;
+}
 
-    .padding-block-10px{padding: 10px;}
+.roi-calculator-modal .pair-block-change {
+    padding: 24px;
+    border: 1px solid #e7e3eb;
+    border-radius: 24px;
+    margin-bottom: 20px;
+}
 
-    .token-pair.cake-button.PROJECTED-RESULTS-outer {margin-bottom: 10px;}
+.roi-calculator-modal .pair-block-change-right .token-two.bottom-token.token-style {
+    padding-bottom: 0px;
+}
 
-    .PROJECTED-RESULTS span, .PROJECTED-RESULTS label {
-        font-size: 16px;
-    }
-    
-    .PROJECTED-RESULTS label {
-        color: #2dcbd7;
-    }
-    
-    .PROJECTED-RESULTS span {
-        color: #280d5f;
-        margin-right: 5px;
-    }
-    
-    .HOLD-Tokens {
-        height: 28px;
-        padding: 0px 8px;
-        font-size: 14px;
-        color: #7a6eaa;
-        background: none;
-        border: 2px solid #7a6eaa;
-        border-radius: 16px;
-        line-height: 27px;
-    }
-    
-    .Provide-Liquidity {
-        background: linear-gradient(#53dee9,#7645d9);
-        color: #fff;
-        height: 32px;
-        padding: 0px 8px;
-        font-size: 14px;
-        border-radius: 16px;
-        line-height: 27px;
-    }
-    
-    .dialog-content.PROJECTED-RESULTS-outer-outer {
-        margin-top: 30px;
-    }
+.roi-calculator-modal .history-price-tab>div>div {
+    width: 99%;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: #eff4f5;
+    border-radius: 16px;
+    display: inline-flex;
+    border: 1px solid #e9eaeb;
+    justify-content: space-between;
+}
 
-    button.balance-btn-submit-add {
-        width: 100%;
-        margin-top: 20px;
-        background: #40cfda;
-        box-shadow: none;
-        height: 40px;
-        font-size: 16px;
-        font-weight: 700;
-        border-radius: 16px;
-    }
-    
-    .add-liquidity.add-liquidity-modal-popup .liquidit-title.liquidit-title-head {
-        background: #f0f0f0;
-    }
-    
-    .add-liquidity.add-liquidity-modal-popup .liquidit-title.liquidit-title-head h2 {
-        color: #7645d9 !important;
-        font-weight: 700;
-    }
-    
-    .add-liquidity.add-liquidity-modal-popup .liquidit-title.liquidit-title-head .MuiPaper-root.MuiPaper-elevation {
-        background: transparent !important;
-    }
 
-    .add-liquidity.add-liquidity-modal-popup .MuiPaper-root.MuiPaper-elevation{
-        width: 100%;
-        max-width: 440px;
-    }
+.roi-calculator-modal .history-price-tab-box {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
-    .al-left {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-    
-    .al-left-imgs img {
-        width: 30px;
-    }
-    
-    .al-left-pair {
-        color: #7645d9 !important;
-        font-weight: 700;
-    }
-    
-    .al-left-right {
-        padding: 16px 20px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    
-    
-    .al-right span {
-        background: #40cfda;
-        color: #fff;
-        display: inline-block;
-        padding: 5px 10px;
-        border-radius: 10px;
-    }
+.roi-calculator-modal .history-price-tab>div>div button {
+    height: 32px;
+    border-radius: 16px !important;
+    font-size: 16px;
+    color: #2dcbd7;
+    width: 25%;
+}
 
-    .coin-al-balance-tier-block-outer {
-        border: 1px solid #eee;
-        margin: 0 20px;
-        border-radius: 10px;
-    }
-    
-    .coin-al-balance-tier-block {
-        padding-top: 0px !important;
-    }
-    
-    .coin-al-balance-tier-block-outer .al-left-right {
-        padding: 5px 10px;
-    }
-    
-    .coin-al-balance-tier-block-outer .al-left-right .al-right {
-        text-align: right;
-    }
-    
-    .coin-al-balance-tier-block-outer .al-left-right .al-right label {
-        color: #7645d9;
-        font-weight: 600;
-    }
-    
-    .coin-al-balance-tier-block-outer .al-left-right .al-right p {
-        margin: 0px;
-        font-size: 12px;
-    }
+.roi-calculator-modal .history-price-tab>div>div button.Mui-selected {
+    background: #2dcbd7;
+}
 
-    .before-add-liquidity, .after-add-liquidity, .mid-step-add-liquidity {
-        margin-bottom: 20px;
-    }
+.roi-calculator-modal .history-price-tab-box>div {
+    border: none;
+}
 
-    .before-add-liquidity, .after-add-liquidity {
-        margin-bottom: 20px;
-    }
-    
-    .staking-farming-left-right, .staking-farming-left {
-        display: flex;
-    }
-    
-    .staking-farming-left-left > span {
-        display: block;
-        font-size: 12px;
-        color: #3e00bc;
-    }
-    
-    .staking-farming-left-left > label {
-        font-size: 16px;
-        font-weight: 700;
-        color: #3e00bc;
-    }
-    
-    .staking-farming-left-right-unstake button {
-        width: 100px;
+.roi-calculator-modal div#liquidity-block-left .MuiFormControl-root fieldset {
+    border: 1px solid #d7caec;
+    border-radius: 16px;
+    box-shadow: inset 0px 2px 2px -1px rgba(74, 74, 104, .1);
+    height: 60px !important;
+    width: 100%;
+}
+
+.roi-calculator-modal div#liquidity-block-left .MuiFormControl-root {
+    margin-left: 0px;
+    width: 91%;
+}
+
+.roi-calculator-modal .dolar-range-deposit-amnt {
+    justify-content: space-between;
+}
+
+.roi-calculator-modal .dolar-range-deposit-amnt button {
+    color: #2dcbd7 !important;
+    height: 20px;
+    font-size: 12px;
+    width: 30%;
+    border-radius: 16px;
+    background: #eff4f5;
+    border: none;
+    font-weight: 700;
+}
+
+.roi-calculator-modal .dolar-range-deposit-amnt button.active-cls,
+.roi-calculator-modal .dolar-range-deposit-amnt button:hover {
+    color: #fff !important;
+    background: #2dcbd7 !important;
+}
+
+.roi-calculator-modal .dolar-range-deposit-amnt {
+    justify-content: space-between;
+}
+
+.roi-calculator-modal .dolar-range-deposit-amnt button {
+    color: #2dcbd7 !important;
+    height: 20px;
+    font-size: 12px;
+    width: 30%;
+    border-radius: 16px;
+    background: #eff4f5;
+    border: none;
+    font-weight: 700;
+}
+
+
+.roi-calculator-modal button.full-range-button {
+    height: 32px;
+    color: #2dcbd7 !important;
+    font-weight: 600;
+    text-transform: none;
+    width: 100%;
+    margin-top: 16px;
+    border-radius: 16px;
+    border-color: #2dcbd7 !important;
+    border-width: 2px;
+}
+
+.roi-calculator-modal .liquidit-content {
+    max-height: 500px;
+    overflow: auto;
+    height: 500px;
+}
+
+.roi-calculator-modal h3.price-percentage-block-part {
+    font-size: 24px;
+    color: #280d5f;
+    font-weight: 600;
+    margin: 5px 0px 0px;
+}
+
+.roi-calculator-modal h3.price-percentage-block-part span {
+    color: #000;
+}
+
+.token-pair.cake-button.set-price-roi-calc {
+    text-align: right;
+}
+
+.your-position-appear-here {
+    color: #280d5f;
+    font-weight: 600;
+    line-height: 1.5;
+    padding-top: 4px;
+    text-align: center;
+    font-size: 20px;
+    padding: 50px 0;
+    margin-bottom: 20px;
+}
+
+.roi-price-tabs-stack-for button {
+    width: 20% !important;
+}
+
+.roi-calculator-modal .roi-at-current-rate {
+    padding: 24px;
+    border-radius: 16px;
+    background: linear-gradient(139.73deg, #e5fdff, #f3efff);
+    margin-top: 30px;
+}
+
+h3.price-percentage-block-part {
+    font-size: 24px;
+    color: #280d5f;
+    font-weight: 600;
+    margin: 5px 0px;
+}
+
+
+.roi-at-apply-setting button {
+    width: 100%;
+    background: #2dcbd7;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 16px;
+}
+
+.roi-at-apply-setting {
+    margin-top: 20px;
+}
+
+.roi-at-calcullate-impermanent-loss {
+    background: #faf9fa;
+    padding: 12px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.edit-reset-font button {
+    font-size: 12px;
+    height: 20px;
+    line-height: 30px;
+}
+
+.ABV-table {
+    padding: 0px !important;
+    margin-top: 10px !important;
+}
+
+.token-pair.cake-button.edit-reset-outer {
+    margin-bottom: 10px;
+}
+
+.ABV-table th {
+    color: #7645d9;
+    font-weight: 700;
+    line-height: 1.5;
+    text-transform: uppercase;
+    margin: 0px;
+    font-size: 12px;
+    padding: 15px;
+}
+
+.asset-mg-block-outer {
+    color: #280d5f;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-left: 4px;
+    font-size: 16px;
+    display: flex;
+    gap: 5px;
+}
+
+.asset-mg-block {
+    width: 25px;
+}
+
+.asset-mg-block img {
+    width: 100%;
+}
+
+.padding-block-10px {
+    padding: 10px;
+}
+
+.token-pair.cake-button.PROJECTED-RESULTS-outer {
+    margin-bottom: 10px;
+}
+
+.PROJECTED-RESULTS span,
+.PROJECTED-RESULTS label {
+    font-size: 16px;
+}
+
+.PROJECTED-RESULTS label {
+    color: #2dcbd7;
+}
+
+.PROJECTED-RESULTS span {
+    color: #280d5f;
+    margin-right: 5px;
+}
+
+.HOLD-Tokens {
+    height: 28px;
+    padding: 0px 8px;
+    font-size: 14px;
+    color: #7a6eaa;
+    background: none;
+    border: 2px solid #7a6eaa;
+    border-radius: 16px;
+    line-height: 27px;
+}
+
+.Provide-Liquidity {
+    background: linear-gradient(#53dee9, #7645d9);
+    color: #fff;
+    height: 32px;
+    padding: 0px 8px;
+    font-size: 14px;
+    border-radius: 16px;
+    line-height: 27px;
+}
+
+.dialog-content.PROJECTED-RESULTS-outer-outer {
+    margin-top: 30px;
+}
+
+button.balance-btn-submit-add {
+    width: 100%;
+    margin-top: 20px;
+    background: #40cfda;
+    box-shadow: none;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 16px;
+}
+
+.add-liquidity.add-liquidity-modal-popup .liquidit-title.liquidit-title-head {
+    background: #f0f0f0;
+}
+
+.add-liquidity.add-liquidity-modal-popup .liquidit-title.liquidit-title-head h2 {
+    color: #7645d9 !important;
+    font-weight: 700;
+}
+
+.add-liquidity.add-liquidity-modal-popup .liquidit-title.liquidit-title-head .MuiPaper-root.MuiPaper-elevation {
+    background: transparent !important;
+}
+
+.add-liquidity.add-liquidity-modal-popup .MuiPaper-root.MuiPaper-elevation {
+    width: 100%;
+    max-width: 440px;
+}
+
+.al-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.al-left-imgs img {
+    width: 30px;
+}
+
+.al-left-pair {
+    color: #7645d9 !important;
+    font-weight: 700;
+}
+
+.al-left-right {
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.al-right span {
+    background: #40cfda;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.coin-al-balance-tier-block-outer {
+    border: 1px solid #eee;
+    margin: 0 20px;
+    border-radius: 10px;
+}
+
+.coin-al-balance-tier-block {
+    padding-top: 0px !important;
+}
+
+.coin-al-balance-tier-block-outer .al-left-right {
+    padding: 5px 10px;
+}
+
+.coin-al-balance-tier-block-outer .al-left-right .al-right {
+    text-align: right;
+}
+
+.coin-al-balance-tier-block-outer .al-left-right .al-right label {
+    color: #7645d9;
+    font-weight: 600;
+}
+
+.coin-al-balance-tier-block-outer .al-left-right .al-right p {
+    margin: 0px;
+    font-size: 12px;
+}
+
+.before-add-liquidity,
+.after-add-liquidity,
+.mid-step-add-liquidity {
+    margin-bottom: 20px;
+}
+
+.before-add-liquidity,
+.after-add-liquidity {
+    margin-bottom: 20px;
+}
+
+.staking-farming-left-right,
+.staking-farming-left {
+    display: flex;
+}
+
+.staking-farming-left-left>span {
+    display: block;
+    font-size: 12px;
+    color: #3e00bc;
+}
+
+.staking-farming-left-left>label {
+    font-size: 16px;
+    font-weight: 700;
+    color: #3e00bc;
+}
+
+.staking-farming-left-right-unstake button {
+    width: 100px;
     box-shadow: none;
     background: transparent !important;
     border: 2px solid #1fc7d4 !important;
     color: #1fc7d4 !important;
-    }
-    
-    .staking-farming-left-left p {
-        margin: 5px 0;
-    }
-    
-    .coin-rate-small span {
-        font-size: 13px;
-    }
-    
-    .staking-farming-left {
-        gap: 20px;
-        justify-content: space-between;
-        align-items: flex-end;
-        padding-right: 20px;
-    }
+}
 
-    .staking-farming-left, .staking-farming-right {
-        width: 50%;
-    }
-    
-    .staking-farming-right {
-        padding-left: 20px;
-    }
+.staking-farming-left-left p {
+    margin: 5px 0;
+}
 
-    .staking-farming-left {
-        border-right: 1px solid #eee;
-    }
-    
-    .staking-farming-left-right {
-        padding: 16px;
-        border: 1px solid #eee;
-        border-radius: 16px;
-        background: #fff;
-        box-shadow: -2px 4px 10px #ccc;
-    }
+.coin-rate-small span {
+    font-size: 13px;
+}
 
-    .staking-farming-left {
-        border-right: 1px solid #eee;
-    }
-    
-    .harvest-balance {
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .harvest-balance button {
-        text-transform: none;
-        padding: 5px 10px;
-    }
-    
-    .harvest-balance button {
-        padding: 5px 10px !important;
-    }
-    
-    .harvest-balance span {
-        font-size: 16px;
-        color: #3e00bc;
-        font-weight: 600;
-    }
+.staking-farming-left {
+    gap: 20px;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-right: 20px;
+}
 
-    .mid-step-add-liquidity .staking-farming-left {
-        border-right: none !important;
-        width: 100%;
-    }
-    
-    .mid-step-add-liquidity .staking-farming-left button {
-        width: 100px;
-        box-shadow: none;
-    }
-    
-    .free-tier-block {
-        padding: 10px 20px;
-        display: flex;
-        align-items: center;
-        border-top: 1px solid #eee;
-        justify-content: space-between;
-        margin: 0 10px;
-    }
-    
-    .free-tier-block h5 {
-        margin: 0px;
-        font-size: 14px;
-    }
-    
-    .free-tier-block span {
-        font-size: 14px;
-    }
+.staking-farming-left,
+.staking-farming-right {
+    width: 50%;
+}
 
-    .token-pair.cake-button.coin-al-balance-tier-block-outer-cake-button {
-        padding: 20px;
-        justify-content: flex-end;
-    }
+.staking-farming-right {
+    padding-left: 20px;
+}
 
-    .mmc-block-part {
-        border: 1px solid #eee;
-        padding: 10px;
-        border-radius: 16px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 40%;
-    }
-    
-    .min-max-current {
-        display: flex;
-        gap: 15px;
-        flex-wrap: wrap;
-        padding: 0 20px;
-        justify-content: center;
-    }
-    
-    .mmc-block-part strong, .mmc-block-part span {
-        font-size: 13px;
-    }
-    
-    .mmc-block-part label {
-        color: #7645d9;
-        font-weight: 700;
-        margin: 5px;
-    }
-    
-    button.add-liqui-add-btn-inner {
-        margin: 20px;
-        width: 90%;
-        background: #40cfda;
-        box-shadow: none;
-    }
-    
-    .mmc-block-part {
-        border: 1px solid #eee;
-        padding: 10px;
-        border-radius: 16px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 40%;
-    }
-    
-    .min-max-current {
-        display: flex;
-        gap: 15px;
-        flex-wrap: wrap;
-        padding: 0 20px;
-        justify-content: center;
-    }
-    
-    .mmc-block-part strong, .mmc-block-part span {
-        font-size: 13px;
-    }
-    
-    .mmc-block-part label {
-        color: #7645d9;
-        font-weight: 700;
-        margin: 5px;
-    }
-    
-    button.add-liqui-add-btn-inner {
-        margin: 20px;
-        width: 90%;
-        background: #40cfda;
-        box-shadow: none;
-    }
-    
-    .coin-al-balance-tier-block.unstacking-pop-up-inner-block {}
-    
-    .coin-al-balance-tier-block.unstacking-pop-up-inner-block .staking-farming-left {
-        width: 100%;
-        border-right: none;
-        padding-right: 0px;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
-    
-    .coin-al-balance-tier-block.unstacking-pop-up-inner-block .staking-farming-left-right {
-        margin: 20px;
-        box-shadow: none;
-    }
-    
-    .coin-al-balance-tier-block.unstacking-pop-up-inner-block .staking-farming-left label, .coin-al-balance-tier-block.unstacking-pop-up-inner-block .staking-farming-left span {
-        color: #000;
-    }
-    
-    .coin-al-balance-tier-block.unstacking-pop-up-inner-block .staking-farming-left-right-stake button, .coin-al-balance-tier-block.unstacking-pop-up-inner-block .staking-farming-left-right-stake {
-        width: 100%;
-    }
-    
-    .coin-al-balance-tier-block.unstacking-pop-up-inner-block .staking-farming-left-right-stake button {
-        background: #eee;
-        box-shadow: none;
-        color: #40cfda;
-    }
-    button.add-liqui-add-btn-inner.unstake-button {
-        background: #40cfda !important;
-        border-radius: 16px;
-        margin: 0px 20px 10px;
-    }
+.staking-farming-left {
+    border-right: 1px solid #eee;
+}
 
-    p.unstake-para {
-        margin: 0px;
-        font-size: 14px;
-        padding: 10px 23px 20px;
-    }
+.staking-farming-left-right {
+    padding: 16px;
+    border: 1px solid #eee;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: -2px 4px 10px #ccc;
+}
+
+.staking-farming-left {
+    border-right: 1px solid #eee;
+}
+
+.harvest-balance {
+    display: flex;
+    justify-content: space-between;
+}
+
+.harvest-balance button {
+    text-transform: none;
+    padding: 5px 10px;
+}
+
+.harvest-balance button {
+    padding: 5px 10px !important;
+}
+
+.harvest-balance span {
+    font-size: 16px;
+    color: #3e00bc;
+    font-weight: 600;
+}
+
+.mid-step-add-liquidity .staking-farming-left {
+    border-right: none !important;
+    width: 100%;
+}
+
+.mid-step-add-liquidity .staking-farming-left button {
+    width: 100px;
+    box-shadow: none;
+}
+
+.free-tier-block {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #eee;
+    justify-content: space-between;
+    margin: 0 10px;
+}
+
+.free-tier-block h5 {
+    margin: 0px;
+    font-size: 14px;
+}
+
+.free-tier-block span {
+    font-size: 14px;
+}
+
+.token-pair.cake-button.coin-al-balance-tier-block-outer-cake-button {
+    padding: 20px;
+    justify-content: flex-end;
+}
+
+.mmc-block-part {
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+.min-max-current {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    justify-content: center;
+}
+
+.mmc-block-part strong,
+.mmc-block-part span {
+    font-size: 13px;
+}
+
+.mmc-block-part label {
+    color: #7645d9;
+    font-weight: 700;
+    margin: 5px;
+}
+
+button.add-liqui-add-btn-inner {
+    margin: 20px;
+    width: 90%;
+    background: #40cfda;
+    box-shadow: none;
+}
+
+.mmc-block-part {
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+.min-max-current {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    justify-content: center;
+}
+
+.mmc-block-part strong,
+.mmc-block-part span {
+    font-size: 13px;
+}
+
+.mmc-block-part label {
+    color: #7645d9;
+    font-weight: 700;
+    margin: 5px;
+}
+
+button.add-liqui-add-btn-inner {
+    margin: 20px;
+    width: 90%;
+    background: #40cfda;
+    box-shadow: none;
+}
+
+.coin-al-balance-tier-block.unstacking-pop-up-inner-block {}
+
+.coin-al-balance-tier-block.unstacking-pop-up-inner-block .staking-farming-left {
+    width: 100%;
+    border-right: none;
+    padding-right: 0px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.coin-al-balance-tier-block.unstacking-pop-up-inner-block .staking-farming-left-right {
+    margin: 20px;
+    box-shadow: none;
+}
+
+.coin-al-balance-tier-block.unstacking-pop-up-inner-block .staking-farming-left label,
+.coin-al-balance-tier-block.unstacking-pop-up-inner-block .staking-farming-left span {
+    color: #000;
+}
+
+.coin-al-balance-tier-block.unstacking-pop-up-inner-block .staking-farming-left-right-stake button,
+.coin-al-balance-tier-block.unstacking-pop-up-inner-block .staking-farming-left-right-stake {
+    width: 100%;
+}
+
+.coin-al-balance-tier-block.unstacking-pop-up-inner-block .staking-farming-left-right-stake button {
+    background: #eee;
+    box-shadow: none;
+    color: #40cfda;
+}
+
+button.add-liqui-add-btn-inner.unstake-button {
+    background: #40cfda !important;
+    border-radius: 16px;
+    margin: 0px 20px 10px;
+}
+
+p.unstake-para {
+    margin: 0px;
+    font-size: 14px;
+    padding: 10px 23px 20px;
+}
 
 .unstakenotify img {
     height: 110px;
@@ -1752,174 +1848,237 @@ width: 150px;
     top: 16px;
 }
 
-    @media (max-width:991.98px){
+@media (max-width:991.98px) {
 
-        .empty-block-mobile{display: none !important;}
-        .search-bar .MuiFormControl-root {
-            width: 100%;
-        }
-        
-        .search-bar {
-            margin-top: 10px;
-            margin-left: 0px;
-        }
-        .sortby {
-            margin: 20px 0;
-        }
-        
-        .live td {
-            white-space: nowrap;
-            padding: 10px !important;
-        }
-        
-        tbody.accordion-tab-div {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-        }
-        .live .table-contain{border-radius: 5px !important;}
-        .live .titlename {
-            padding-left: 0;
-        }
-        .usdt-sec-td {
-            flex-direction: column;
-            align-items: flex-end;
-            min-width: auto;
-        }
-        
-        tbody.accordion-tab-head {
-            display: flex;
-            flex-wrap: wrap;
-            width: 100%;
-            max-width: 100% !important;
-        }
-        
-        tbody.accordion-tab-head td:nth-last-child(2), tbody.accordion-tab-head td:nth-last-child(3),tbody.accordion-tab-head td:nth-last-child(4),tbody.accordion-tab-head td:nth-last-child(5) {
-            display: none;
-        }
-        
-        tbody.accordion-tab-head td:first-child {
-            width: 60%;
-        }
-        
-        tbody.accordion-tab-head td:nth-child(2) {
-            width: 25%;
-        }
-        
-        tbody.accordion-tab-head td:nth-child(3){
-            width: 15%;
-        }
-        tbody.accordion-tab-head td:nth-child(4) {
-           width: 55%;
-        }
-        .farmimg-page {
-            height: auto;
-        }
-        .live table {
-            min-width: 100%;
-        }
-        .add-liquidity .MuiPaper-root.MuiPaper-elevation {
-            overflow: auto;
-        }
-        .liquidit-title.liquidit-title-head {
-            flex-direction: row;
-            flex-wrap: nowrap;
-            padding: 0px 20px;
-        }
-        
-        .pairing-block {
-            flex-direction: column;
-        }
-        
-        .pairing-block .chain-select-options.chain-select-options-buy.select-token.dropdown-container {
-            width: 100%;
-        }
-        div#liquidity-block-left {
-            padding-right: 0;
-        }
-        .token-pair.cake-button > div {
-            text-align: right;
-        }
-        .token-pair.cake-button h4, .token-pair.cake-button > div {
-            width: 50%;
-        }
-        .percentage-button-block button{font-size: 11px !important;}
-        .add-liquidity .MuiDialog-container {
-            margin: 10px !important;
-        }
-        
-        .percentage-button-block {
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-        }
-        
-        .v3-lp-tier-stack {
-            flex-wrap: wrap;
-            gap: 20px 10px !important;
-            justify-content: space-around;
-        }
-        
-        .v3-lp-tier-stack button {
-            width: 45% !important;
-        }
-        .liquidit-title h2#alert-dialog-title {
-            font-size: 17px;
-        }
-        .add-liquidity .MuiPaper-root.MuiPaper-elevation {
-            border-radius: 10px !important;
-        }
-        .chain-select-options.chain-select-options-sell.select-token.dropdown-container .dropdown-menu, .chain-select-options.chain-select-options-buy.select-token.dropdown-container .dropdown-menu{width: 88% !important;}
-        .usdt-fourth-td .apr-value svg {
-            display: none;
-        }
-        
-        .usdt-fourth-td .per-increase {
-            flex-direction: column;
-            display: flex;
-        }
-        .free-tier-bottom .MuiStack-root button div{border: none !important;width: 86% !important;height: 100%;}
-
-        .staking-farming-left-right {
-            flex-direction: column;
-        }
-        
-        .staking-farming-left {
-            flex-direction: column;
-        }
-        
-        .staking-farming-left, .staking-farming-right {
-            width: 100%;
-            align-items: flex-start;
-        }
-        
-        .harvest-balance {
-            justify-content: flex-start;
-            align-items: center;
-            gap: 60px;
-        }
-
+    .empty-block-mobile {
+        display: none !important;
     }
 
-
-    @media (min-width:768px) and (max-width:991.98px){
-
-        .pair-block-change {
-            display: flex;
-            justify-content: space-between;
-        }
-        
-        .pair-block-change-right, .pair-block-change-left {
-            width: 45%;
-        }
-        
-        .liquidity-inner-blocks-right {
-            display: flex !important;
-            flex-wrap: nowrap !important;
-        }
-        .pairing-block {
-            flex-direction: row !important;
-            gap: 15px !important;
-        }
-
+    .search-bar  {
+        width: 100%;
     }
+
+    .search-bar {
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+
+    .sortby {
+        margin: 20px 0;
+    }
+
+    .live td {
+        white-space: nowrap;
+        padding: 10px !important;
+    }
+
+    tbody.accordion-tab-div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .live .table-contain {
+        border-radius: 5px !important;
+    }
+
+    .live .titlename {
+        padding-left: 0;
+    }
+
+    .usdt-sec-td {
+        flex-direction: column;
+        align-items: flex-end;
+        min-width: auto;
+    }
+
+    tbody.accordion-tab-head {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 100% !important;
+    }
+
+    tbody.accordion-tab-head td:nth-last-child(2),
+    tbody.accordion-tab-head td:nth-last-child(3),
+    tbody.accordion-tab-head td:nth-last-child(4),
+    tbody.accordion-tab-head td:nth-last-child(5) {
+        display: none;
+    }
+
+    tbody.accordion-tab-head td:first-child {
+        width: 60%;
+    }
+
+    tbody.accordion-tab-head td:nth-child(2) {
+        width: 25%;
+    }
+
+    tbody.accordion-tab-head td:nth-child(3) {
+        width: 15%;
+    }
+
+    tbody.accordion-tab-head td:nth-child(4) {
+        width: 55%;
+    }
+
+    .farmimg-page {
+        height: auto;
+    }
+
+    .live table {
+        min-width: 100%;
+    }
+
+    .add-liquidity .MuiPaper-root.MuiPaper-elevation {
+        overflow: auto;
+    }
+
+    .liquidit-title.liquidit-title-head {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding: 0px 20px;
+    }
+
+    .pairing-block {
+        flex-direction: column;
+    }
+
+    .pairing-block .chain-select-options.chain-select-options-buy.select-token.dropdown-container {
+        width: 100%;
+    }
+
+    div#liquidity-block-left {
+        padding-right: 0;
+    }
+
+    .token-pair.cake-button>div {
+        text-align: right;
+    }
+
+    .token-pair.cake-button h4,
+    .token-pair.cake-button>div {
+        width: 50%;
+    }
+
+    .percentage-button-block button {
+        font-size: 11px !important;
+    }
+
+    .add-liquidity .MuiDialog-container {
+        margin: 10px !important;
+    }
+
+    .percentage-button-block {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .v3-lp-tier-stack {
+        flex-wrap: wrap;
+        gap: 20px 10px !important;
+        justify-content: space-around;
+    }
+
+    .v3-lp-tier-stack button {
+        width: 45% !important;
+    }
+
+    .liquidit-title h2#alert-dialog-title {
+        font-size: 17px;
+    }
+
+    .add-liquidity .MuiPaper-root.MuiPaper-elevation {
+        border-radius: 10px !important;
+    }
+
+    .chain-select-options.chain-select-options-sell.select-token.dropdown-container .dropdown-menu,
+    .chain-select-options.chain-select-options-buy.select-token.dropdown-container .dropdown-menu {
+        width: 88% !important;
+    }
+
+    .usdt-fourth-td .apr-value svg {
+        display: none;
+    }
+
+    .usdt-fourth-td .per-increase {
+        flex-direction: column;
+        display: flex;
+    }
+
+    .free-tier-bottom .MuiStack-root button div {
+        border: none !important;
+        width: 86% !important;
+        height: 100%;
+    }
+
+    .staking-farming-left-right {
+        flex-direction: column;
+    }
+
+    .staking-farming-left {
+        flex-direction: column;
+    }
+
+    .staking-farming-left,
+    .staking-farming-right {
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .harvest-balance {
+        justify-content: flex-start;
+        align-items: center;
+        gap: 60px;
+    }
+
+}
+
+
+@media (min-width:768px) and (max-width:991.98px) {
+
+    .pair-block-change {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .pair-block-change-right,
+    .pair-block-change-left {
+        width: 45%;
+    }
+
+    .liquidity-inner-blocks-right {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+    }
+
+    .pairing-block {
+        flex-direction: row !important;
+        gap: 15px !important;
+    }
+
+}
+
+.sortby.first1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.sortby.first1 div#demo-simple-select {
+    color: #fff;
+    padding-top: 7px;
+}
+
+.no-img {
+    width: 25px;
+    height: 25px;
+    background: #000;
+    border-radius: 50px;
+    color: #fff;
+    line-height: 1.6;
+    text-align: center;
+    font-size: 16px;
+}

@@ -49,7 +49,7 @@ const Footer = () => {
               <ul className='header-menus'>
 
                 {/* <li><Link to='/exchange'>Exchange</Link></li> */}
-                <li><div><button className='back' onClick={c}>Exchange</button></div> </li>
+                <li><div><button className='back' style={{ cursor: 'pointer' }} onClick={c}>Exchange</button></div> </li>
                 <li><Link to='/staking'>Staking</Link></li>
                 <li><Link to='/swap'>Swap</Link></li>
                 <li><Link to='/application'>Application</Link></li>

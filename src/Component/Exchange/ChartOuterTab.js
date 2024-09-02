@@ -10,6 +10,7 @@ import Menu from '@mui/material/Menu';
 import { styled, alpha } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import TradingViewWidget from './TradingViewWidget';
+import Web3 from 'web3';
 // import { TVChartContainer } from './TradeChart';
 
 
@@ -158,8 +159,7 @@ const StyledMenu = styled((props) => (
 
 
 
-const ChartOuterTab = () => {
-
+const ChartOuterTab = ({ pairs }) => {
   const [value, setValue] = React.useState(0);
   const [anchordot, setAnchorDot] = React.useState(null);
 
@@ -193,22 +193,20 @@ const ChartOuterTab = () => {
 
 
       <TabPanel value={value} index={0} className={classes.tabpanelcls}>
-        <TradingViewWidget />
+        <TradingViewWidget pairs={pairs} />
       </TabPanel>
 
       <TabPanel value={value} index={1} className={classes.tabpanelcls}>
-        <TradingViewWidget />
+        <TradingViewWidget pairs={pairs} />
       </TabPanel>
 
       <TabPanel value={value} index={2} className={classes.tabpanelcls}>
-        <TradingViewWidget />
+        <TradingViewWidget pairs={pairs} />
       </TabPanel>
 
       <TabPanel value={value} index={3} className={classes.tabpanelcls}>
-        <TradingViewWidget />
+        <TradingViewWidget pairs={pairs} />
       </TabPanel>
-
-
     </Box>
   )
 }

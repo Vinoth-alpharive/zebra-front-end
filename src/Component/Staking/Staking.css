@@ -41,6 +41,10 @@
 
 .img-name img {
     margin-right: 10px;
+    width: 27px;
+    border-radius: 49%;
+    clip-path: circle(50% at 50% 50%);
+    height: 26px;
 }
 
 .percentage-est {

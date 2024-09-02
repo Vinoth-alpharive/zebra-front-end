@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
@@ -9,6 +9,7 @@ import LeftSide from '../Exchange/LeftSide';
 import RightSide from '../Exchange/RightSide';
 import MidPart from '../Exchange/MidPart';
 import './Exchange.css'
+import loader from '../../images/loader1.gif'
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -75,69 +76,82 @@ const useStyles = makeStyles({
       paddingTop: '0px !important',
     }
   },
-
 });
 
 const Exchange = () => {
+  useEffect(() => {
+    document.title = "Zebra Exchange | Exchange"
+  }, [])
 
 
   const classes = useStyles();
 
   const [pairs, setpairs] = useState()
+  const [fullpairs, setFullPairs] = useState()
   const [tr, settr] = useState(false)
+
+  const [loading, setLoading] = useState(false)
+
+  const logos = (data) => {
+    setLoading(data)
+  }
+
   const pairsSelected = (e) => {
     setpairs((e))
   }
 
+  const fullPair = (e) => {
+    setFullPairs(e)
+  }
+
   const trades = (e) => {
-    // console.log(e, 'e')
     settr(e)
   }
 
   return (
+    <>
+      {
+        loading === true ? <div className='swap-loader'><div className='swap-loader-inner'><img src={loader} className='loadings' /></div></div> : <></>
+      }
+      <div className="bittrex-homepage-exchange">
 
+        <Box sx={{ flexGrow: 1 }} className={classes.bodymain}>
 
-    <div className="bittrex-homepage-exchange">
+          <Grid container spacing={2}>
 
-      <Box sx={{ flexGrow: 1 }} className={classes.bodymain}>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className={classes.head}>
+              <Item className={classes.headinner}>
+                <Header className='fixed-header'/>
+              </Item>
+            </Grid>
 
-        <Grid container spacing={2}>
-
-          <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className={classes.head}>
-            <Item className={classes.headinner}>
-              <Header />
-            </Item>
           </Grid>
 
-        </Grid>
+          {/* <div className='statusaskbidmain'><BidAskMobileStatus/></div> */}
 
-        {/* <div className='statusaskbidmain'><BidAskMobileStatus/></div> */}
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={12} md={12} lg={3} xl={3} className='carouselgrid'>
+              <Item className={classes.tabpart}>
+                <LeftSide pairsSelected={pairsSelected} fullPair={fullPair} />
+              </Item>
+            </Grid>
 
-        <Grid container spacing={2}>
+            <Grid item xs={12} sm={12} md={12} lg={6} xl={6} className={classes.tradepartmiddle}>
+              <Item className={classes.tradepart}>
+                <MidPart tr={tr} pairs={pairs} />
+              </Item>
+            </Grid>
 
-          <Grid item xs={12} sm={12} md={12} lg={3} xl={3} className='carouselgrid'>
-            <Item className={classes.tabpart}>
-              <LeftSide pairsSelected={pairsSelected} />
-            </Item>
+            <Grid item xs={12} sm={12} md={12} lg={3} xl={3} className={classes.craeteaccright}>
+              <Item className={classes.craeteacc}>
+                <RightSide pairs={pairs} trades={trades} fullpairs={fullpairs} loading={logos} />
+              </Item>
+            </Grid>
           </Grid>
+        </Box>
 
-          <Grid item xs={12} sm={12} md={12} lg={6} xl={6} className={classes.tradepartmiddle}>
-            <Item className={classes.tradepart}>
-              <MidPart tr={tr} />
-            </Item>
-          </Grid>
-
-          <Grid item xs={12} sm={12} md={12} lg={3} xl={3} className={classes.craeteaccright}>
-            <Item className={classes.craeteacc}>
-              <RightSide pairs={pairs} trades={trades} />
-            </Item>
-          </Grid>
-
-        </Grid>
-      </Box>
-
-    </div>
-
+      </div>
+    </>
   )
 }
 
